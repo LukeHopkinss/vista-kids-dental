@@ -7,9 +7,9 @@ import aspectRatio from '@tailwindcss/aspect-ratio';
 export default {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',     // harmless if you don't use /pages
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',     
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}',       // keep if you use a /src structure
+    './src/**/*.{js,ts,jsx,tsx,mdx}',      
   ],
   theme: {
     extend: {
