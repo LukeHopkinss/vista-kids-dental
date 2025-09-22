@@ -9,7 +9,7 @@ export default function Footer() {
         </div>
         <div className="text-xs text-slate-500">
           © {new Date().getFullYear()} vista kids dental ·{" "}
-          <a className="underline" href="/sitemap">sitemap</a> ·{" "}
+          <a className="underline" href="/site-map">sitemap</a> ·{" "}
           <a className="underline" href="/accessibility">accessibility</a>
         </div>
       </div>
