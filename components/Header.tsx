@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-const LOGO_SRC = "/images/logo/fulllogo.png";
+const LOGO_SRC = "/images/logo/fulllogo_transparent_nobuffer.png";
 const LOGO_ALT = "Vista Kids Dental";
 
 const nav = [
@@ -34,15 +34,15 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-6">
           {nav.map((i) => (
-            <Link key={i.href} href={i.href} className="capitalize hover:text-sky-700">
+            <Link key={i.href} href={i.href} className="capitalize hover:text-orange-400">
               {i.label}
             </Link>
           ))}
           <Link
             href="/appointments"
-            className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-sky-700"
+            className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-orange-400"
           >
-            request appointment
+            Request Appointment
           </Link>
         </nav>
 
@@ -73,11 +73,11 @@ export default function Header() {
               className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium text-center"
               onClick={() => setOpen(false)}
             >
-              request appointment
+              Request Appointment
             </Link>
             <div className="flex items-center gap-4 pt-2 text-sm">
               <a className="underline" href="tel:+17605551234">
-                call
+                (760)-330-5995
               </a>
             </div>
           </div>
