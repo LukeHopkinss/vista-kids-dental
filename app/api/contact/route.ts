@@ -15,9 +15,8 @@ export async function POST(req: Request) {
 
   try {
     await sendContactEmails({ name, phone, email: email || undefined, message });
-  } catch (err) {
-    console.error("sendContactEmails failed:", err);
-    // still redirect so users aren't blocked by errors
+  } catch (e) {
+    console.error("contact email failed:", e);
   }
 
   return NextResponse.redirect(new URL("/contact", req.url), { status: 303 });

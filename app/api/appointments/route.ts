@@ -1,20 +1,27 @@
+// app/api/appointments/route.ts
 import { NextResponse } from "next/server";
-// import { sendAppointmentEmail } from "@/lib/email"; // optional later
+import { sendAppointmentEmails } from "@/lib/email";
 
 export async function POST(req: Request) {
   const form = await req.formData();
-
-  // spam honeypot: if filled, silently succeed
   if (form.get("nickname")) {
     return NextResponse.redirect(new URL("/appointments/thank-you", req.url), { status: 303 });
   }
 
-  // TODO: validate (optional) and send email
-  // await sendAppointmentEmail(Object.fromEntries(form.entries()));
+  const parentName = String(form.get("name") || "");
+  const patientName = String(form.get("patient") || "");
+  const phone = String(form.get("phone") || "");
+  const email = String(form.get("email") || "");
+  const preference = String(form.get("preference") || "");
+  const notes = String(form.get("notes") || "");
 
-  // for now, log the submission so you can see it in the server console
-  console.log("Appointment request:", Object.fromEntries(form.entries()));
+  try {
+    await sendAppointmentEmails({
+      parentName, patientName, phone, email: email || undefined, preference, notes
+    });
+  } catch (e) {
+    console.error("appointment email failed:", e);
+  }
 
-  // redirect to confirmation
   return NextResponse.redirect(new URL("/appointments/thank-you", req.url), { status: 303 });
 }
