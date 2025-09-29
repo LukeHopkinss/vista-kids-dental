@@ -9,8 +9,7 @@ const LOGO_ALT = "Vista Kids Dental";
 const nav = [
   { href: "/services", label: "services" },
   { href: "/about", label: "about" },
-  { href: "/office-tour", label: "office tour" },
-  { href: "/new-patient-forms", label: "forms" },
+  { href: "/new-patients", label: "new patients" },
   { href: "/contact", label: "contact" },
 ];
 
