@@ -1,6 +1,10 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+
+const LOGO_SRC = "/images/logo/fulllogo.png";
+const LOGO_ALT = "Vista Kids Dental";
 
 const nav = [
   { href: "/services", label: "services" },
@@ -16,10 +20,20 @@ export default function Header() {
   return (
     <header className="border-b border-slate-200">
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="font-semibold text-lg">vista kids dental</Link>
+        <Link href="/" className="flex items-center gap-2" aria-label={`${LOGO_ALT} — Home`}>
+          <Image
+            src={LOGO_SRC}
+            alt={LOGO_ALT}
+            width={36}
+            height={36}
+            priority
+            className="h-9 w-auto"
+          />
+          <span className="sr-only">{LOGO_ALT}</span>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-          {nav.map(i => (
+          {nav.map((i) => (
             <Link key={i.href} href={i.href} className="capitalize hover:text-sky-700">
               {i.label}
             </Link>
@@ -34,7 +48,7 @@ export default function Header() {
 
         <button
           className="md:hidden inline-flex items-center rounded border px-3 py-2"
-          onClick={() => setOpen(v => !v)}
+          onClick={() => setOpen((v) => !v)}
           aria-label="toggle navigation"
         >
           ☰
@@ -44,8 +58,13 @@ export default function Header() {
       {open && (
         <div className="md:hidden border-t border-slate-200">
           <div className="mx-auto max-w-6xl px-4 py-3 grid gap-3">
-            {nav.map(i => (
-              <Link key={i.href} href={i.href} className="capitalize py-2" onClick={() => setOpen(false)}>
+            {nav.map((i) => (
+              <Link
+                key={i.href}
+                href={i.href}
+                className="capitalize py-2"
+                onClick={() => setOpen(false)}
+              >
                 {i.label}
               </Link>
             ))}
@@ -57,8 +76,9 @@ export default function Header() {
               request appointment
             </Link>
             <div className="flex items-center gap-4 pt-2 text-sm">
-              <a className="underline" href="tel:+17605551234">call</a>
-              <a className="underline" href="sms:+17605551234">text</a>
+              <a className="underline" href="tel:+17605551234">
+                call
+              </a>
             </div>
           </div>
         </div>
@@ -66,3 +86,4 @@ export default function Header() {
     </header>
   );
 }
+
