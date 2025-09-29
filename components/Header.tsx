@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-const LOGO_SRC = "/images/logo/fulllogo_transparent_nobuffer.png";
+const LOGO_SRC = "/images/logo/vkd-logo.png";
 const LOGO_ALT = "Vista Kids Dental";
 
 const nav = [
