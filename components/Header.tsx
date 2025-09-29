@@ -27,7 +27,7 @@ export default function Header() {
             width={36}
             height={36}
             priority
-            className="h-9 w-auto"
+            className="h-14 w-auto"
           />
           <span className="sr-only">{LOGO_ALT}</span>
         </Link>
