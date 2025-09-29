@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-const LOGO_SRC = "/images/logo/vkd-logo.svg";
+const LOGO_SRC = "/images/logo/vkd-transparent-logo.svg";
 const LOGO_ALT = "Vista Kids Dental";
 
 const nav = [
@@ -27,7 +27,7 @@ export default function Header() {
             width={36}
             height={36}
             priority
-            className="h-14 w-auto"
+            className="h-15 w-auto"
           />
           <span className="sr-only">{LOGO_ALT}</span>
         </Link>
