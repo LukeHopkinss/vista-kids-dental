@@ -6,10 +6,10 @@ export default function Home() {
       <div className="grid gap-6 md:grid-cols-2 md:items-center">
         <div>
           <h1 className="text-4xl/tight md:text-5xl font-bold">
-            pediatric dental care in vista
+            Pediatric dental care in Vista
           </h1>
           <p className="mt-4 text-slate-600 max-w-prose">
-            gentle, specialized care for infants, children, and teens. board-certified pediatric dentist. parents welcome.
+            Gentle, specialized care for infants, children, and teens. Board-certified pediatric dentist. Parents welcome.
           </p>
           <div className="mt-6 flex gap-3">
             <Link href="/appointments" className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-orange-400">
