@@ -67,61 +67,105 @@ export async function sendContactEmails({
 }
 
 /** Appointment request: email office + (optional) confirmation to visitor */
-export async function sendAppointmentEmails({
-  parentName, patientName, phone, email, preference, notes,
-}: {
-  parentName: string;
-  patientName?: string;
+export async function sendAppointmentEmails(payload: {
+  firstName: string;
+  lastName: string;
   phone: string;
   email?: string;
-  preference?: string; // preferred day/time
-  notes?: string;
-}) {
-  const safe = {
-    parentName: esc(parentName),
-    patientName: patientName ? esc(patientName) : "",
-    phone: esc(phone),
-    email: email ? esc(email) : "",
-    preference: preference ? esc(preference) : "",
-    notes: notes ? esc(notes) : "",
-  };
 
-  // Office copy
+  address1?: string;
+  city?: string;
+  state?: string;
+  zip?: string;
+
+  patientName?: string;
+  patientAge?: string;
+  patientGender?: string;
+
+  preferredDate?: string;
+  preferredDays?: string[];  // Monday, Tuesday...
+  preferredTime?: string;    // Morning/Afternoon/Evening
+  reason?: string;
+
+  comments?: string;
+}) {
+  const p = Object.fromEntries(
+    Object.entries(payload).map(([k, v]) => [k, Array.isArray(v) ? v.map(esc) : v ? esc(String(v)) : ""])
+  ) as typeof payload & { preferredDays?: string[] };
+
+  const fullName = `${p.firstName} ${p.lastName}`.trim();
+  const days = (p.preferredDays && p.preferredDays.length) ? p.preferredDays.join(", ") : "";
+
+  const officeSubject = `New appointment request — ${SITE}`;
+  const officeHtml = `
+    <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial">
+      <h2 style="margin:0 0 8px">${SITE} — Appointment Request</h2>
+
+      <h3 style="margin:12px 0 4px">Your Information</h3>
+      <table style="border-collapse:collapse">
+        <tr><td style="padding:4px 8px"><b>Name</b></td><td style="padding:4px 8px">${fullName}</td></tr>
+        <tr><td style="padding:4px 8px"><b>Phone</b></td><td style="padding:4px 8px">${p.phone}</td></tr>
+        <tr><td style="padding:4px 8px"><b>Email</b></td><td style="padding:4px 8px">${p.email || "—"}</td></tr>
+        ${(p.address1 || p.city || p.state || p.zip) ? `
+        <tr><td style="padding:4px 8px"><b>Address</b></td><td style="padding:4px 8px">
+          ${[p.address1, [p.city, p.state].filter(Boolean).join(", "), p.zip].filter(Boolean).join(" • ")}
+        </td></tr>` : ""}
+      </table>
+
+      <h3 style="margin:16px 0 4px">Patient Information</h3>
+      <table style="border-collapse:collapse">
+        <tr><td style="padding:4px 8px"><b>Patient</b></td><td style="padding:4px 8px">${p.patientName || "—"}</td></tr>
+        <tr><td style="padding:4px 8px"><b>Age</b></td><td style="padding:4px 8px">${p.patientAge || "—"}</td></tr>
+        <tr><td style="padding:4px 8px"><b>Gender</b></td><td style="padding:4px 8px">${p.patientGender || "—"}</td></tr>
+      </table>
+
+      <h3 style="margin:16px 0 4px">Appointment Preferences</h3>
+      <table style="border-collapse:collapse">
+        <tr><td style="padding:4px 8px"><b>Preferred Date</b></td><td style="padding:4px 8px">${p.preferredDate || "—"}</td></tr>
+        <tr><td style="padding:4px 8px"><b>Preferred Day(s)</b></td><td style="padding:4px 8px">${days || "—"}</td></tr>
+        <tr><td style="padding:4px 8px"><b>Preferred Time</b></td><td style="padding:4px 8px">${p.preferredTime || "—"}</td></tr>
+        <tr><td style="padding:4px 8px"><b>Reason</b></td><td style="padding:4px 8px">${p.reason || "—"}</td></tr>
+      </table>
+
+      ${p.comments ? `<h3 style="margin:16px 0 4px">Comments</h3><p style="white-space:pre-wrap">${p.comments}</p>` : ""}
+    </div>
+  `;
+
+  const userSubject = `We received your appointment request`;
+  const userHtml = `
+    <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial">
+      <p>Hi ${p.firstName || "there"},</p>
+      <p>Thanks for requesting an appointment with ${SITE}. Our team will contact you by phone to confirm availability.</p>
+      ${(p.preferredDate || days || p.preferredTime || p.reason) ? `
+      <p><b>Your preferences:</b><br/>
+        ${[
+          p.preferredDate && `Date: ${p.preferredDate}`,
+          days && `Day(s): ${days}`,
+          p.preferredTime && `Time: ${p.preferredTime}`,
+          p.reason && `Reason: ${p.reason}`
+        ].filter(Boolean).join("<br/>")}
+      </p>` : ""}
+      ${p.comments ? `<p><b>Your comment:</b><br/><span style="white-space:pre-wrap">${p.comments}</span></p>` : ""}
+      <p style="color:#64748b;font-size:12px;margin-top:16px">If this wasn’t you, you can ignore this email.</p>
+    </div>
+  `;
+
+  // Office inbox
   await resend.emails.send({
     from: FROM,
-    to: TO, // ← same recipient for appointments
-    subject: `New appointment request — ${SITE}`,
-    html: `
-      <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial">
-        <h2 style="margin:0 0 8px">${SITE} — Appointment Request</h2>
-        <table style="border-collapse:collapse">
-          <tr><td style="padding:4px 8px"><b>Parent/Guardian</b></td><td style="padding:4px 8px">${safe.parentName}</td></tr>
-          ${safe.patientName ? `<tr><td style="padding:4px 8px"><b>Patient</b></td><td style="padding:4px 8px">${safe.patientName}</td></tr>` : ""}
-          <tr><td style="padding:4px 8px"><b>Phone</b></td><td style="padding:4px 8px">${safe.phone}</td></tr>
-          <tr><td style="padding:4px 8px"><b>Email</b></td><td style="padding:4px 8px">${safe.email || "—"}</td></tr>
-          ${safe.preference ? `<tr><td style="padding:4px 8px"><b>Preferred time</b></td><td style="padding:4px 8px">${safe.preference}</td></tr>` : ""}
-          ${safe.notes ? `<tr><td style="padding:4px 8px;vertical-align:top"><b>Notes</b></td><td style="padding:4px 8px;white-space:pre-wrap">${safe.notes}</td></tr>` : ""}
-        </table>
-      </div>
-    `,
-    replyTo: safe.email || undefined,
+    to: TO,
+    subject: officeSubject,
+    html: officeHtml,
+    replyTo: p.email || undefined,
   });
 
   // Visitor confirmation
-  if (safe.email) {
+  if (p.email) {
     await resend.emails.send({
       from: FROM,
-      to: safe.email,
-      subject: `We received your appointment request`,
-      html: `
-        <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial">
-          <p>Hi ${safe.parentName},</p>
-          <p>Thanks for requesting an appointment with ${SITE}. Our team will contact you to confirm details and availability.</p>
-          ${safe.preference ? `<p><b>Preferred time:</b> ${safe.preference}</p>` : ""}
-          ${safe.notes ? `<p><b>Your notes:</b><br/><span style="white-space:pre-wrap">${safe.notes}</span></p>` : ""}
-          <p style="color:#64748b;font-size:12px;margin-top:16px">If this wasn’t you, you can ignore this email.</p>
-        </div>
-      `,
+      to: p.email,
+      subject: userSubject,
+      html: userHtml,
     });
   }
 }
