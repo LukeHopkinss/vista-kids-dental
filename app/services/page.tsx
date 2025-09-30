@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const services = [
   { slug: "cavities-and-fillings", title: "Cavities & Fillings", blurb: "Composite resin and other filling options." },
-  { slug: "emergency-dental-care", title: "Emergency Dental Care", blurb: "What to do if a dental emergency happens." },
+  { slug: "emergency-dental-care", title: "Emergency Dental Care", blurb: "Service in case of emergencies." },
   { slug: "oral-health-exams", title: "Oral Health Exams", blurb: "Professional cleanings and checkups." },
   { slug: "preventative-dentistry", title: "Preventative Dentistry", blurb: "Cleanings, polishing, fluoride as needed." },
   { slug: "restorative-dentistry", title: "Restorative Dentistry", blurb: "Fillings, veneers/caps, implants + crowns." },
   { slug: "sealants", title: "Sealants", blurb: "Protective coating for chewing surfaces." },
-  { slug: "sedation-dentistry", title: "Sedation Dentistry", blurb: "Nitrous oxide (laughing gas) for comfort." },
+  { slug: "sedation-dentistry", title: "Sedation Dentistry", blurb: "Nitrous oxide for comfort during procedures." },
   { slug: "silver-diamine-fluoride", title: "Silver Diamine Fluoride", blurb: "Helps strengthen teeth and prevent decay." },
   { slug: "digital-x-rays", title: "Digital X-Rays", blurb: "See what we can’t view with the naked eye." },
   { slug: "intraoral-camera", title: "Intraoral Camera", blurb: "Photos that explain and track treatment." },
