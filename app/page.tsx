@@ -12,11 +12,11 @@ export default function Home() {
             gentle, specialized care for infants, children, and teens. board-certified pediatric dentist. parents welcome.
           </p>
           <div className="mt-6 flex gap-3">
-            <Link href="/appointments" className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-sky-700">
-              request appointment
+            <Link href="/appointments" className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-orange-400">
+              Request Appointment
             </Link>
-            <Link href="/services" className="rounded-lg border px-4 py-2">
-              our services
+            <Link href="/services" className="rounded-lg border px-4 py-2 hover:text-orange-400">
+              Our Services
             </Link>
           </div>
         </div>
