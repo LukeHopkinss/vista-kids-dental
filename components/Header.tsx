@@ -183,7 +183,7 @@ export default function Header() {
             </Link>
 
             <div className="flex items-center gap-4 pt-2 text-sm">
-              <a className="underline" href="tel:+17605551234">(760)-330-5995</a>
+              <a className="underline" href="tel:+17603305995">(760)-330-5995</a>
             </div>
           </div>
         </div>
