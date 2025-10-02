@@ -6,8 +6,12 @@ import { useState, useRef } from "react";
 
 const LOGO_SRC = "/images/logo/vkd-transparent-logo.svg";
 const LOGO_ALT = "Vista Kids Dental";
+const PHONE_DISPLAY = "(760) 330-5995";
+const PHONE_TEL = "+17603305995";
+const ADDRESS_TEXT = "1235 W Vista Way, Ste. F, Vista CA, 92083";
+const MAPS_URL = "https://maps.app.goo.gl/iU4iCDSwdVazQcGj8"
 
-// Your existing nav (unchanged labels/routes)
+// NAV LABELS AND ROUTES
 type NavItem =
   | { href: string; label: string }
   | { label: string; children: { href: string; label: string }[] };
@@ -43,6 +47,20 @@ export default function Header() {
 
   return (
     <header className="border-b border-slate-200">
+
+      {/* CONTACT STRIP — visible on desktop & mobile 
+      <div className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-sm">
+          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            {ADDRESS_TEXT}
+          </a>
+          <a href={`tel:${PHONE_TEL}`} className="hover:text-orange-400">
+            {PHONE_DISPLAY}
+          </a>
+        </div>
+      </div>
+        */}
+        
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label={`${LOGO_ALT} — Home`}>
           <Image
