@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Explore pediatric dental services: exams, cleanings, sealants, tooth-colored fillings, digital X-rays, sedation, emergency care, and more.",
+  alternates: { canonical: "/services" },
+};
 
 const services = [
   { slug: "cavities-and-fillings", title: "Cavities & Fillings", blurb: "Composite resin and other filling options." },

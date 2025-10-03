@@ -5,19 +5,10 @@ import Link from "next/link";
 import BackgroundBlobs from "@/components/BackgroundBlobs";
 
 export const metadata: Metadata = {
-  title: "Pediatric Dentist in Colleyville, TX",
+  title: "Pediatric Dentist in Vista, CA",
   description:
-    "Pediatric dentistry for infants, children, and teens—gentle visits, prevention-first care, same-day emergency help. New patients welcome.",
+    "Gentle pediatric dentistry for infants, children, and teens in Vista, CA. Cleanings, sealants, fillings, digital X-rays, and same-day emergency care.",
   alternates: { canonical: "/" },
-  openGraph: {
-    title: "Pediatric Dentist in Colleyville, TX",
-    description:
-      "Gentle pediatric dental care with prevention-first philosophy, emergency help, and age-appropriate guidance.",
-    type: "website",
-    url: "/",
-    images: ["/og.jpg"],
-  },
-  twitter: { card: "summary_large_image", images: ["/og.jpg"] },
 };
 
 export default function Home() {

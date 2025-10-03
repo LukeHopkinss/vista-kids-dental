@@ -1,8 +1,11 @@
 // app/office-policy/page.tsx
-export const metadata = {
-  title: "Office Policy | Vista Kids Dental",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Office Policy",
   description:
-    "How we schedule, cancellations, insurance & billing, radiographs, privacy, and parent/guardian guidelines.",
+    "Financial policy, insurance information, and scheduling guidelines for Pediatric Dentistry of Colleyville.",
+  alternates: { canonical: "/office-policy" },
 };
 
 export default function OfficePolicy() {

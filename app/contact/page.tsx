@@ -1,4 +1,13 @@
 // app/contact/page.tsx
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Have questions? Contact Vista Kids Dental for appointments, insurance questions, directions, and office hours.",
+  alternates: { canonical: "/contact" },
+};
+
 export default function Contact() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">

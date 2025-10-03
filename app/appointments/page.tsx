@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Request an Appointment",
-  description: "Request your child’s appointment — your info, patient info, and scheduling preferences.",
+  description:
+    "Request your child’s appointment—share your info, patient details, preferred day and time, and the reason for your visit.",
   alternates: { canonical: "/appointments" },
 };
 
