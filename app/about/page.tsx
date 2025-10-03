@@ -24,12 +24,13 @@ export default function AboutPage() {
 
       {/* Headshot + Bio */}
       <div className="grid gap-6 sm:grid-cols-[140px,1fr] sm:items-start">
-        <div className="relative h-36 w-36 overflow-hidden rounded-xl border">
+        <div className="relative h-48 w-48 sm:h-56 sm:w-56 md:h-100 md:w-100 overflow-hidden rounded-2xl border">
           <Image
-            src="/images/team/dr-ta.jpg" // TODO: replace with your actual path
+            src="/images/about/dr-ta.jpg"
             alt="Dr. Ta — Pediatric Dentist"
             fill
-            sizes="144px"
+            // Let Next choose a larger source for bigger breakpoints:
+            sizes="(min-width: 1024px) 320px, (min-width: 640px) 224px, 50vw"
             className="object-cover"
             priority
           />
@@ -37,14 +38,18 @@ export default function AboutPage() {
 
         <div>
           <p className="text-slate-700">
-            Dr. Ta is a board-trained pediatric dentist who loves helping kids feel <strong>safe</strong>,
-            <strong> understood</strong>, and even <strong>excited</strong> about visiting the dentist. His
-            approach blends evidence-based care with a calm, kid-friendly style: <em>tell-show-do</em>,
-            positive reinforcement, and treatment tailored to each child’s needs and personality.
+            Dr. Tuong (David) Ta is a board-certified pediatric dentist who truly believes in the <strong>early prevention</strong> of dental problems and educating families about <strong>life-long healthy teeth</strong>.
+            Getting to know the <strong>uniqueness of each child</strong>, building a trusting relationship, <strong>understanding each family’s individual needs</strong>, and making balloon animals are how he delivers gentle dentistry and creates <strong>positive dental experiences</strong>.
+          </p>
+
+          <p className="mt-3">
+            Dr. Ta and his wife, Mymy, reside in Carlsbad with their three active children, Adrianna, Andrew and Colin. 
+            When he is not in the office, he is pretty much an Uber driver for his kids to their volleyball, football, and basketball practices and games. 
+            He is also their biggest cheerleader at all of their games and tournaments.
           </p>
 
           <p className="mt-3 text-slate-700">
-            He provides comprehensive care — from first-tooth visits and routine cleanings to sealants,
+            Dr. Ta provides comprehensive care — from first-tooth visits and routine cleanings to sealants,
             fillings, crowns, and behavior guidance options like <strong>nitrous oxide</strong> when appropriate.
             Parents are partners in the process, and every visit includes clear explanations and practical tips
             you can use at home.
@@ -56,11 +61,12 @@ export default function AboutPage() {
       <div className="mt-10">
         <h2 className="text-xl font-medium">Training &amp; Affiliations</h2>
         <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-700">
-          <li>Doctor of Dental Surgery (DDS) — <span className="italic">University / School name</span></li>
-          <li>Specialty residency in Pediatric Dentistry — <span className="italic">Program / Hospital name</span></li>
-          <li>Certified in Pediatric Advanced Life Support (PALS) and Basic Life Support (BLS)</li>
+          <li>Doctor of Dental Surgery (DDS) — <span className="italic">University of Washington</span></li>
+          <li>Specialty residency in Pediatric Dentistry — <span className="italic">University of Rochester, Eastman Institute of Oral Health</span></li>
           <li>Member — American Academy of Pediatric Dentistry (AAPD)</li>
           <li>Member — American Dental Association (ADA) &amp; state/local dental societies</li>
+          <li>Masters Degree in Public Health — <span className="italic">Yale University</span></li>
+          <li>Bachelor's of Science in Biology and Engineering — <span className="italic">University of California, Los Angeles</span></li>
         </ul>
       </div>
 
