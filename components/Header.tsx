@@ -6,10 +6,6 @@ import { useState, useRef } from "react";
 
 const LOGO_SRC = "/images/logo/vkd-transparent-logo.svg";
 const LOGO_ALT = "Vista Kids Dental";
-const PHONE_DISPLAY = "(760) 330-5995";
-const PHONE_TEL = "+17603305995";
-const ADDRESS_TEXT = "1235 W Vista Way, Ste. F, Vista CA, 92083";
-const MAPS_URL = "https://maps.app.goo.gl/iU4iCDSwdVazQcGj8"
 
 // NAV LABELS AND ROUTES
 type NavItem =
@@ -60,7 +56,7 @@ export default function Header() {
         </div>
       </div>
         */}
-        
+
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label={`${LOGO_ALT} — Home`}>
           <Image
