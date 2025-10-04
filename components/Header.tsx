@@ -1,4 +1,3 @@
-// components/Header.tsx
 "use client";
 import Link from "next/link";
 import Image from "next/image";
@@ -43,7 +42,6 @@ export default function Header() {
 
   return (
     <header className="border-b border-slate-200">
-
       {/* CONTACT STRIP — visible on desktop & mobile 
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-sm">
@@ -176,14 +174,15 @@ export default function Header() {
                 );
               }
 
+              // simple link branch (no `any` casts)
               return (
                 <Link
-                  key={(item as any).href}
-                  href={(item as any).href}
+                  key={item.href}
+                  href={item.href}
                   className="capitalize py-2"
                   onClick={() => setMobileOpen(false)}
                 >
-                  {(item as any).label}
+                  {item.label}
                 </Link>
               );
             })}
