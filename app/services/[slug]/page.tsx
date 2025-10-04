@@ -12,7 +12,7 @@ const copy: Record<string, Entry> = {
   "emergency-dental-care": {
     title: "Emergency Dental Care",
     body:
-      "Be prepared—emergencies do happen. Knowing what to do can be the difference between losing and saving a tooth, and keeping your dentist’s phone number handy is important. Contact us right away if you’re having an emergency. If we are not open, go to the nearest emergency center.",
+      "Be prepared—emergencies do happen. Knowing what to do can be the difference between losing and saving a tooth, and keeping your dentist's phone number handy is important. Contact us right away if you're having an emergency. If we are not open, go to the nearest emergency center.",
   },
   "oral-health-exams": {
     title: "Oral Health Exams",
@@ -37,17 +37,17 @@ const copy: Record<string, Entry> = {
   "sedation-dentistry": {
     title: "Sedation Dentistry",
     body:
-      "Nitrous oxide—often called laughing gas—helps many children relax during treatment. It’s a mix of oxygen and nitrous oxide delivered through a small mask over the nose. The goal is comfort and cooperation without the full effects of deeper anesthesia.",
+      "Nitrous oxide—often called laughing gas—helps many children relax during treatment. It's a mix of oxygen and nitrous oxide delivered through a small mask over the nose. The goal is comfort and cooperation without the full effects of deeper anesthesia.",
   },
   "silver-diamine-fluoride": {
     title: "Silver Diamine Fluoride",
     body:
-      "Fluoride strengthens teeth and helps prevent tooth decay across all ages. Major professional organizations support topical fluoride for good oral health. Depending on your water supply and risk factors, additional fluoride treatments may or may not be necessary—we’ll guide you.",
+      "Fluoride strengthens teeth and helps prevent tooth decay across all ages. Major professional organizations support topical fluoride for good oral health. Depending on your water supply and risk factors, additional fluoride treatments may or may not be necessary—we'll guide you.",
   },
   "digital-x-rays": {
     title: "Digital X-Rays",
     body:
-      "Dental X-rays help us examine areas we can’t see directly, allowing us to spot cavities between teeth and evaluate teeth and supporting structures. Radiographs guide treatment decisions by revealing issues not visible to the eye.",
+      "Dental X-rays help us examine areas we can't see directly, allowing us to spot cavities between teeth and evaluate teeth and supporting structures. Radiographs guide treatment decisions by revealing issues not visible to the eye.",
   },
   "intraoral-camera": {
     title: "Intraoral Camera",

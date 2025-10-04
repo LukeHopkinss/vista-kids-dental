@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div>
           <p className="text-slate-700">
             Dr. Tuong (David) Ta is a board-certified pediatric dentist who truly believes in the <strong>early prevention</strong> of dental problems and educating families about <strong>life-long healthy teeth</strong>.
-            Getting to know the <strong>uniqueness of each child</strong>, building a trusting relationship, <strong>understanding each family’s individual needs</strong>, and making balloon animals are how he delivers gentle dentistry and creates <strong>positive dental experiences</strong>.
+            Getting to know the <strong>uniqueness of each child</strong>, building a trusting relationship, <strong>understanding each family's individual needs</strong>, and making balloon animals are how he delivers gentle dentistry and creates <strong>positive dental experiences</strong>.
           </p>
 
           <p className="mt-3">
@@ -90,8 +90,8 @@ export default function AboutPage() {
       <div className="mt-10">
         <h2 className="text-xl font-medium">Parents &amp; Guardians</h2>
         <p className="mt-2 text-slate-700">
-          Care works best as a team. We welcome your presence for younger or more anxious children, and we’ll
-          guide increasing independence as kids grow more confident. You’ll always have time to ask questions,
+          Care works best as a team. We welcome your presence for younger or more anxious children, and we'll
+          guide increasing independence as kids grow more confident. You'll always have time to ask questions,
           review findings, and understand next steps.
         </p>
       </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
       <div className="mt-10">
         <h2 className="text-xl font-medium">New Patients</h2>
         <p className="mt-2 text-slate-700">
-          First visits are relaxed and informative. We’ll review health history, complete a gentle exam and
+          First visits are relaxed and informative. We'll review health history, complete a gentle exam and
           cleaning as appropriate, and share personalized tips to keep smiles healthy at home.
         </p>
         <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-700">

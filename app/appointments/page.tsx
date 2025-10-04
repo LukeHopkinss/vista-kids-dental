@@ -13,7 +13,7 @@ export default function Appointments() {
     <section className="mx-auto max-w-3xl px-4 py-10">
       <h1 className="text-3xl font-semibold">Request An Appointment</h1>
       <p className="mt-2 text-slate-600">
-        Please don’t include personal medical details — specific care is discussed during your visit.
+        Please don't include personal medical details — specific care is discussed during your visit.
       </p>
 
       <form action="/api/appointments" method="POST" className="mt-8 grid gap-6">
@@ -107,7 +107,7 @@ export default function Appointments() {
           </label>
 
           <div className="grid gap-2">
-            <span className="text-sm">If this date isn’t available, choose preferred day(s) of the week</span>
+            <span className="text-sm">If this date isn't available, choose preferred day(s) of the week</span>
             <div className="flex flex-wrap gap-4">
               {["Monday","Tuesday","Wednesday","Thursday","Friday"].map((d) => (
                 <label key={d} className="inline-flex items-center gap-2">

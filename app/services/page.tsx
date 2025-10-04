@@ -17,7 +17,7 @@ const services = [
   { slug: "sealants", title: "Sealants", blurb: "Protective coating for chewing surfaces." },
   { slug: "sedation-dentistry", title: "Sedation Dentistry", blurb: "Nitrous oxide for comfort during procedures." },
   { slug: "silver-diamine-fluoride", title: "Silver Diamine Fluoride", blurb: "Helps strengthen teeth and prevent decay." },
-  { slug: "digital-x-rays", title: "Digital X-Rays", blurb: "See what we can’t view with the naked eye." },
+  { slug: "digital-x-rays", title: "Digital X-Rays", blurb: "See what we can't view with the naked eye." },
   { slug: "intraoral-camera", title: "Intraoral Camera", blurb: "Photos that explain and track treatment." },
 ];
 

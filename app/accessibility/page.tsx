@@ -17,7 +17,7 @@ export default function AccessibilityPage() {
       <p className="mt-2 text-slate-700">
         At Vista Kids Dental, we respect the dignity and independence of our guests and we
         are committed to providing full and equal access to everyone who visits our facility and website.
-        Here’s what you can expect from us:
+        Here's what you can expect from us:
       </p>
 
       <h2 className="mt-8 text-xl font-medium">Communication</h2>

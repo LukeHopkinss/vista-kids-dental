@@ -79,7 +79,7 @@ export default function PostOp() {
       <div className="mt-8">
         <h2 className="text-xl font-medium">Pulpotomy</h2>
         <p className="mt-2 text-slate-700">
-          The success of a pulpotomy depends on the severity of the dental infection and the body’s reaction
+          The success of a pulpotomy depends on the severity of the dental infection and the body's reaction
           to the treatment. If a pulpotomy is not performed, or if the nerve treatment fails and the tooth
           <strong> abscesses</strong>, the <strong>tooth must be extracted</strong>. In that event, a{" "}
           <strong>space maintainer</strong> will be needed to hold space for the permanent tooth. A tooth may
@@ -92,13 +92,13 @@ export default function PostOp() {
       <div className="mt-8">
         <h2 className="text-xl font-medium">Local Anesthetic</h2>
         <p className="mt-2 text-slate-700">
-          Typically the numb feeling may last <strong>2–4 hours</strong> after treatment, affecting the
+          Typically the numb feeling may last <strong>2-4 hours</strong> after treatment, affecting the
           cheeks, lips, and tongue. This can be a curious sensation for a child—take care that your child{" "}
           <strong>does not bite, suck, or chew</strong> the lips, tongue, or cheek. Please keep to a{" "}
           <strong>liquid diet until the anesthetic has worn off</strong>. When the numbness (“bubbles”) wears
-          off, there can be a <strong>10–15 minute</strong> period of increased tingling that may cause
-          anxiety; reassure your child it will pass and, if needed, give <strong>Children’s Tylenol or
-          Children’s Motrin</strong> as directed on the package.
+          off, there can be a <strong>10-15 minute</strong> period of increased tingling that may cause
+          anxiety; reassure your child it will pass and, if needed, give <strong>Children's Tylenol or
+          Children's Motrin</strong> as directed on the package.
         </p>
       </div>
 
@@ -126,7 +126,7 @@ export default function PostOp() {
             pain persist, please text the office promptly.
           </li>
           <li>
-            For discomfort give <strong>Children’s Tylenol</strong> or <strong>Children’s Motrin</strong>{" "}
+            For discomfort give <strong>Children's Tylenol</strong> or <strong>Children's Motrin</strong>{" "}
             (liquid or pills—<strong>no chewables</strong>) as the package directs.
           </li>
         </ul>

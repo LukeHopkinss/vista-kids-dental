@@ -13,7 +13,7 @@ export default function OfficePolicy() {
     <section className="mx-auto max-w-3xl px-4 py-10">
       <h1 className="text-3xl font-semibold">Office Policy</h1>
       <p className="mt-3 text-slate-700">
-        We’re committed to a friendly, efficient visit for every child and family. Below you’ll find our
+        We're committed to a friendly, efficient visit for every child and family. Below you'll find our
         guidelines for appointments, billing, privacy, and what to expect during visits.
       </p>
 
@@ -36,7 +36,7 @@ export default function OfficePolicy() {
             <li>Our mission is to provide affordable, high-quality treatment that fits your budget.</li>
             <li>Accepted payment methods: <strong>Cash, Check, and Visa, MasterCard, American Express, and Discover</strong>.</li>
             <li>Low and no-interest financing is available through <strong>CareCredit</strong>.</li>
-            <li>If you have questions about financing or payment, please ask—we’ll explain your choices and work to accommodate your needs.</li>
+            <li>If you have questions about financing or payment, please ask—we'll explain your choices and work to accommodate your needs.</li>
             <li><strong>All deductible, coinsurance, non-covered services, and other charges not covered by insurance are due at the time of service.</strong></li>
         </ul>
 
@@ -60,7 +60,7 @@ export default function OfficePolicy() {
           information</strong> to file a claim. We allow <strong>45 days</strong> from the date the claim is filed
           for the insurance company to pay; if your carrier does not pay within this time, <strong>you will be
           responsible for the entire balance</strong>. Please remember that <strong>insurance is a benefit for you
-          and your child</strong>. Should your insurance change, we request <strong>48-hours’ notice</strong> prior
+          and your child</strong>. Should your insurance change, we request <strong>48-hours' notice</strong> prior
           to your appointment so we can obtain updated information.
         </p>
       </div>
@@ -74,29 +74,29 @@ export default function OfficePolicy() {
         </p>
         <ol className="mt-3 space-y-2 text-slate-700">
             <li>
-                <strong>FACT #1 –</strong> Dental insurance is a contract between you, your employer and the insurance
+                <strong>FACT #1 -</strong> Dental insurance is a contract between you, your employer and the insurance
                 company. We are not a party to that contract.
             </li>
             <li>
-                <strong>FACT #2 –</strong> Dental insurance is NOT meant to cover all fees. It is meant to be an aid to
-                your investment in your child’s dental healthcare. Many routine dental services are not covered by
+                <strong>FACT #2 -</strong> Dental insurance is NOT meant to cover all fees. It is meant to be an aid to
+                your investment in your child's dental healthcare. Many routine dental services are not covered by
                 dental insurance.
             </li>
             <li>
-                <strong>FACT #3 –</strong> Many carriers claim that they reimburse the insured promptly “up to 80% or up
-                to 100% of the total fees.” In actuality, we have found that most plans cover about 40%–50% of average
+                <strong>FACT #3 -</strong> Many carriers claim that they reimburse the insured promptly “up to 80% or up
+                to 100% of the total fees.” In actuality, we have found that most plans cover about 40%-50% of average
                 fees. Some plans pay more, some less. The less paid for the insurance by your employer, the less
                 coverage you will receive.
             </li>
             <li>
-                <strong>FACT #4 –</strong> Usual, Customary or Reasonable Fees (UCR), a term used by your insurance
+                <strong>FACT #4 -</strong> Usual, Customary or Reasonable Fees (UCR), a term used by your insurance
                 carrier, is an arbitrary amount which the insurance company chooses to pay for each procedure. It is
                 not based on the average charge of practicing specialists in the area; it is merely the “allowable”
-                amount they will reimburse so they can make a net 20%–30% profit. Our fees are within range of other
+                amount they will reimburse so they can make a net 20%-30% profit. Our fees are within range of other
                 pediatric dental offices in the area.
             </li>
             <li>
-                <strong>FACT #5 –</strong> Insurance companies will not release the exact amount they will pay for a
+                <strong>FACT #5 -</strong> Insurance companies will not release the exact amount they will pay for a
                 procedure until the treatment is completed and the claim is submitted. They will only state the
                 percentage of their fee schedule that they will cover. We will make every effort to assure you receive
                 maximum benefits. We will file your insurance at no charge. In order to provide this service, we will

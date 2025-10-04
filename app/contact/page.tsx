@@ -30,11 +30,11 @@ export default function Contact() {
           <div>
             <h3 className="font-medium">Business Hours</h3>
             <ul className="mt-2 grid grid-cols-2 gap-y-1 text-slate-700">
-              <li>Monday</li><li>8:00 AM – 5:00 PM</li>
-              <li>Tuesday</li><li>8:00 AM – 5:00 PM</li>
-              <li>Wednesday</li><li>8:00 AM – 5:00 PM</li>
-              <li>Thursday</li><li>8:00 AM – 5:00 PM</li>
-              <li>Friday</li><li>8:00 AM – 5:00 PM</li>
+              <li>Monday</li><li>8:00 AM - 5:00 PM</li>
+              <li>Tuesday</li><li>8:00 AM - 5:00 PM</li>
+              <li>Wednesday</li><li>8:00 AM - 5:00 PM</li>
+              <li>Thursday</li><li>8:00 AM - 5:00 PM</li>
+              <li>Friday</li><li>8:00 AM - 5:00 PM</li>
               <li>Saturday</li><li>Closed</li>
               <li>Sunday</li><li>Closed</li>
             </ul>

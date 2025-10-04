@@ -140,7 +140,7 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-semibold">New Patients</h2>
             <p className="mt-2 text-slate-700">
-              First visits are relaxed and informative. We’ll review health history, complete a gentle exam and
+              First visits are relaxed and informative. We'll review health history, complete a gentle exam and
               cleaning as appropriate, and share age-specific tips for home care.
             </p>
             <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-1">
@@ -198,8 +198,8 @@ export default function Home() {
               Phone: <a className="underline" href="tel:+17603305995">(760)-330-5995</a>
             </p>
             <ul className="mt-3 text-slate-700">
-              <li>Mon–Fri: 8:00am – 5:00pm</li>
-              <li>Sat–Sun: Closed</li>
+              <li>Mon-Fri: 8:00am - 5:00pm</li>
+              <li>Sat-Sun: Closed</li>
             </ul>
             <div className="not-prose mt-4 flex flex-wrap gap-3">
               <Link href="/appointments" className="inline-block rounded-lg bg-sky-600 px-5 py-3 text-white font-medium hover:bg-orange-400">
