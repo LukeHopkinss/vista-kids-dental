@@ -5,6 +5,11 @@ import { useState, useRef } from "react";
 
 const LOGO_SRC = "/images/logo/vkd-transparent-logo.svg";
 const LOGO_ALT = "Vista Kids Dental";
+const PHONE_TEL = "+17603305995";
+const PHONE_DISPLAY = "(760) 330-5995";
+const ADDRESS_DISPLAY = "1235 W Vista Way Ste. F Vista CA, 92083";
+const ADDRESS_URL = "https://www.google.com/maps/place/1235+W+Vista+Way+f,+Vista,+CA+92083/data=!4m2!3m1!1s0x80dc7154b5f4f1c9:0x27a70b0b159a4835?sa=X&ved=1t:242&ictx=111";
+
 
 // NAV LABELS AND ROUTES
 type NavItem =
@@ -12,10 +17,11 @@ type NavItem =
   | { label: string; children: { href: string; label: string }[] };
 
 const nav: NavItem[] = [
+  { href: ADDRESS_URL, label: "1235 W Vista Way, Vista CA",},
+  { href: "/about", label: "about us" },
   { href: "/services", label: "services" },
-  { href: "/about", label: "about" },
   {
-    label: "new patients",
+    label: "patient info",
     children: [
       { href: "/office-policy", label: "Office Policy" },
       { href: "/post-op", label: "Post-Op Instructions" },
@@ -41,21 +47,10 @@ export default function Header() {
   };
 
   return (
-    <header className="border-b border-slate-200">
-      {/* CONTACT STRIP — visible on desktop & mobile 
-      <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-sm">
-          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
-            {ADDRESS_TEXT}
-          </a>
-          <a href={`tel:${PHONE_TEL}`} className="hover:text-orange-400">
-            {PHONE_DISPLAY}
-          </a>
-        </div>
-      </div>
-        */}
+    <>
+    <header className="fixed top-0 inset-x-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70">
 
-      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label={`${LOGO_ALT} — Home`}>
           <Image
             src={LOGO_SRC}
@@ -63,7 +58,7 @@ export default function Header() {
             width={36}
             height={36}
             priority
-            className="h-15 w-auto"
+            className="h-23 w-auto"
           />
           <span className="sr-only">{LOGO_ALT}</span>
         </Link>
@@ -114,7 +109,14 @@ export default function Header() {
             }
 
             return (
-              <Link key={item.href} href={item.href} className="capitalize hover:text-orange-400">
+              <Link 
+                key={item.href} 
+                href={item.href} 
+                className={`hover:text-orange-400 capitalize ${
+                item.href === ADDRESS_URL ? "text-xs normal-case text-slate-600" : ""
+                }`}
+                title={item.href === ADDRESS_URL ? ADDRESS_DISPLAY : item.label}
+              >
                 {item.label}
               </Link>
             );
@@ -126,6 +128,14 @@ export default function Header() {
           >
             Request Appointment
           </Link>
+
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-orange-400 whitespace-nowrap"
+            aria-label={`Call ${PHONE_DISPLAY}`}
+          >
+            {PHONE_DISPLAY}
+          </a>
         </nav>
 
         {/* MOBILE HAMBURGER */}
@@ -189,18 +199,35 @@ export default function Header() {
 
             <Link
               href="/appointments"
-              className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium text-center"
+              className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium text-center hover:bg-orange-400"
               onClick={() => setMobileOpen(false)}
             >
               Request Appointment
             </Link>
 
-            <div className="flex items-center gap-4 pt-2 text-sm">
-              <a className="underline" href="tel:+17603305995">(760)-330-5995</a>
-            </div>
+             <a
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex justify-center rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-orange-400 whitespace-nowrap"
+                aria-label={`Call ${PHONE_DISPLAY}`}
+             >
+                {PHONE_DISPLAY}
+             </a>
+
+             <a
+                href={ADDRESS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 text-sm text-slate-700 underline-offset-2 hover:underline mx-auto text-center"
+                aria-label={`Open directions to ${ADDRESS_DISPLAY}`}
+             >
+                {ADDRESS_DISPLAY}
+             </a>
           </div>
         </div>
       )}
     </header>
+
+    <div className="h-[64px] md:h-[72px]" aria-hidden />
+    </>
   );
 }
