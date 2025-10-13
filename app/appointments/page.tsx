@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Appointments() {
   return (
-    <section className="mx-auto max-w-3xl px-4 py-10">
+    <section className="mx-auto max-w-3xl sm:px-6 lg:px-8 py-10 pt-[72px] md:pt-[88px]">
       <h1 className="text-3xl font-semibold">Request An Appointment</h1>
       <p className="mt-2 text-slate-600">
         Please don't include personal medical details — specific care is discussed during your visit.

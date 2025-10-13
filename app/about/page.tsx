@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    // Add top padding to clear the fixed header (match your header height)
     <main className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 pt-[72px] md:pt-[88px]">
       {/* Page Title / Hero */}
       <header className="mb-8">
@@ -55,7 +54,7 @@ export default function AboutPage() {
 
         <h3 className="mt-6 text-lg font-semibold">What Does a Pediatric Dentist Do?</h3>
         <p className="mt-2 text-slate-700">
-          A pediatric dentist is a dentist that after graduating from dental school completes an additional 2–3 years
+          A pediatric dentist is a dentist that after graduating from dental school completes an additional 2-3 years
           of education focused solely on the oral health of children and those with special needs. This additional
           schooling encompasses topics such as oral trauma, dental emergencies, sedation and general anesthesia, as
           well as managing cases with extensive dental needs. Furthermore, pediatric dentists train in the behavior
@@ -84,7 +83,7 @@ export default function AboutPage() {
         <p className="mt-3 text-slate-700">
           <strong>Dr. Tuong (David) Ta</strong> is a board-certified pediatric dentist who truly believes in the
           early prevention of dental problems and educating families about life-long healthy teeth. Getting to know
-          the uniqueness of each child, building a trusting relationship, understanding each family’s individual
+          the uniqueness of each child, building a trusting relationship, understanding each family's individual
           needs and making balloon animals are how he delivers gentle dentistry and creates positive dental
           experiences.
         </p>
