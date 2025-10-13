@@ -23,7 +23,7 @@ export default function Home() {
               vista kids dental • vista, CA
             </p>
             <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
-              We keep <span className="text-orange-500">kids smiling</span> with calm, confident visits
+              Welcome to <span className="text-sky-600">Vista Kids Dental</span>
             </h1>
             <p className="mt-4 text-slate-700">
               Prevention-first care for infants, children, and teens—cleanings, sealants, fillings,

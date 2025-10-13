@@ -1,7 +1,6 @@
 // app/about/page.tsx
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "About | Vista Kids Dental",
@@ -12,113 +11,110 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="mx-auto max-w-3xl px-4 py-10">
-      {/* Hero / Title */}
+    // Add top padding to clear the fixed header (match your header height)
+    <main className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 pt-[72px] md:pt-[88px]">
+      {/* Page Title / Hero */}
       <header className="mb-8">
-        <h1 className="text-3xl font-semibold">Meet Dr. Ta</h1>
-        <p className="mt-2 text-slate-700">
-          Gentle, prevention-first pediatric dentistry for infants, children, and teens — focused on comfort,
-          education, and building healthy habits that last.
+        <h1 className="text-3xl md:text-4xl font-semibold">About Us | Kids Dentist in Vista</h1>
+        <p className="mt-3 text-slate-700">
+          At Vista Kids Dental, we greet every patient with warmth and care, making them feel like part of our
+          family. <strong>Dr. Tuong (David) Ta</strong> is a board-certified pediatric dentist specialized in
+          children's oral health and provides gentle, anxiety-free treatments to help children maintain healthy
+          smiles as they grow. Located in Vista, CA, our mission is to deliver compassionate, educational, and fun
+          dental experiences.
         </p>
       </header>
 
-      {/* Headshot + Bio */}
-      <div className="grid gap-6 sm:grid-cols-[140px,1fr] sm:items-start">
-        <div className="relative h-48 w-48 sm:h-56 sm:w-56 md:h-100 md:w-100 overflow-hidden rounded-2xl border">
-          <Image
-            src="/images/about/dr-ta.jpg"
-            alt="Dr. Ta — Pediatric Dentist"
-            fill
-            // Let Next choose a larger source for bigger breakpoints:
-            sizes="(min-width: 1024px) 320px, (min-width: 640px) 224px, 50vw"
-            className="object-cover"
-            priority
-          />
-        </div>
+      {/* Offerings */}
+      <section aria-labelledby="offerings" className="mb-12">
+        <h2 id="offerings" className="text-xl md:text-2xl font-medium">We proudly offer:</h2>
+        <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-700">
+          <li>Mercury-free, latex-free, and BPA-free materials</li>
+          <li>Advanced, minimally invasive procedures such as SDF and SMART</li>
+          <li>
+            Modern technology and evidence-based care to Vista and surrounding communities like Carlsbad,
+            Oceanside, San Marcos, Escondido, and Encinitas
+          </li>
+        </ul>
+      </section>
 
-        <div>
-          <p className="text-slate-700">
-            Dr. Tuong (David) Ta is a board-certified pediatric dentist who truly believes in the <strong>early prevention</strong> of dental problems and educating families about <strong>life-long healthy teeth</strong>.
-            Getting to know the <strong>uniqueness of each child</strong>, building a trusting relationship, <strong>understanding each family's individual needs</strong>, and making balloon animals are how he delivers gentle dentistry and creates <strong>positive dental experiences</strong>.
-          </p>
+      {/* Why Pediatric Dentists? (anchor target for /about#why-pediatric-dentists) */}
+      <section
+        id="why-pediatric-dentists"
+        aria-labelledby="why-heading"
+        // Increase scroll margin so the heading isn't hidden under the fixed header
+        className="scroll-mt-32 md:scroll-mt-40 mb-12"
+      >
+        <h2 id="why-heading" className="text-xl md:text-2xl font-medium">Why Pediatric Dentists?</h2>
+        <p className="mt-3 text-slate-700">
+          Most families with children rely on a pediatrician to be responsible for the health of their kids, and the
+          same approach should be taken with dentistry. Pediatric dentists specialize in the oral healthcare of
+          children and patients with special needs. Here are the answers to some frequently asked questions about
+          pediatric dentists:
+        </p>
 
-          <p className="mt-3">
-            Dr. Ta and his wife, Mymy, reside in Carlsbad with their three active children, Adrianna, Andrew and Colin. 
-            When he is not in the office, he is pretty much an Uber driver for his kids to their volleyball, football, and basketball practices and games. 
-            He is also their biggest cheerleader at all of their games and tournaments.
-          </p>
+        <h3 className="mt-6 text-lg font-semibold">What Does a Pediatric Dentist Do?</h3>
+        <p className="mt-2 text-slate-700">
+          A pediatric dentist is a dentist that after graduating from dental school completes an additional 2–3 years
+          of education focused solely on the oral health of children and those with special needs. This additional
+          schooling encompasses topics such as oral trauma, dental emergencies, sedation and general anesthesia, as
+          well as managing cases with extensive dental needs. Furthermore, pediatric dentists train in the behavior
+          management of pediatric patients, a critical skill needed to lower dental anxiety and, consequently, lower
+          the chance of any long-term “dental trauma”.
+        </p>
+        <p className="mt-2 text-slate-700">
+          Pediatric dentists are professionals who have completed a specialized course of dentistry that caters to
+          children who have special needs or otherwise need gentler care. The program consists of two to three years
+          of further training after graduation from dental school. It includes hospital training, where they work
+          with children who have more severe dental needs and emergencies, and training in numerous orthodontic
+          teeth-straightening methods. Pediatric dentists work closely with pediatricians and general dentists, who
+          refer select patients for this specialized dental treatment that requires this advanced training. The
+          American Academy of Pediatric Dentistry (AAPD) is an organization of pediatric dentists, and its website
+          has a good selection of brochures explaining their role in dentistry.
+        </p>
+      </section>
 
-          <p className="mt-3 text-slate-700">
-            Dr. Ta provides comprehensive care — from first-tooth visits and routine cleanings to sealants,
-            fillings, crowns, and behavior guidance options like <strong>nitrous oxide</strong> when appropriate.
-            Parents are partners in the process, and every visit includes clear explanations and practical tips
-            you can use at home.
-          </p>
-        </div>
-      </div>
+      {/* About Dr. Ta (anchor target for /about#about-dr-ta) */}
+      <section
+        id="about-dr-ta"
+        aria-labelledby="drta-heading"
+        className="scroll-mt-32 md:scroll-mt-40 mb-12"
+      >
+        <h2 id="drta-heading" className="text-xl md:text-2xl font-medium">About Dr. Ta</h2>
+        <p className="mt-3 text-slate-700">
+          <strong>Dr. Tuong (David) Ta</strong> is a board-certified pediatric dentist who truly believes in the
+          early prevention of dental problems and educating families about life-long healthy teeth. Getting to know
+          the uniqueness of each child, building a trusting relationship, understanding each family’s individual
+          needs and making balloon animals are how he delivers gentle dentistry and creates positive dental
+          experiences.
+        </p>
+        <p className="mt-2 text-slate-700">
+          Dr. Ta graduated from the University of California, Los Angeles with a Bachelor of Sciences in Biology and
+          Engineering. Dr. Ta also has a Master in Public Health from Yale University. Following his dream to become
+          a pediatric dentist, Dr. Ta obtained his Doctor in Dental Surgery degree from the University of Washington
+          and certificate in pediatric dentistry at the University of Rochester, Eastman Institute of Oral Health.
+        </p>
+        <p className="mt-2 text-slate-700">
+          Dr. Ta and his wife, Mymy, reside in Carlsbad with their three active children, Adrianna, Andrew and
+          Colin. When he is not in the office, he is pretty much an Uber driver for his kids to their volleyball,
+          football, and basketball practices and games. He is also their biggest cheerleader at all of their games
+          and tournaments.
+        </p>
+      </section>
 
       {/* Training & Affiliations */}
-      <div className="mt-10">
-        <h2 className="text-xl font-medium">Training &amp; Affiliations</h2>
+      <section aria-labelledby="training-heading" className="mb-6">
+        <h2 id="training-heading" className="text-xl md:text-2xl font-medium">Training &amp; Affiliations</h2>
         <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-700">
-          <li>Doctor of Dental Surgery (DDS) — <span className="italic">University of Washington</span></li>
-          <li>Specialty residency in Pediatric Dentistry — <span className="italic">University of Rochester, Eastman Institute of Oral Health</span></li>
+          <li>Board Certified in Pediatric Dentistry — American Board of Pediatric Dentistry</li>
+          <li>Certificate in Pediatric Dentistry — University of Rochester, Eastman Institute of Oral Health</li>
+          <li>Doctor of Dental Surgery (DDS) — University of Washington</li>
+          <li>Master in Public Health — Yale University</li>
+          <li>Bachelors of Sciences in Biology and Engineering — UCLA</li>
           <li>Member — American Academy of Pediatric Dentistry (AAPD)</li>
           <li>Member — American Dental Association (ADA) &amp; state/local dental societies</li>
-          <li>Masters Degree in Public Health — <span className="italic">Yale University</span></li>
-          <li>Bachelor's of Science in Biology and Engineering — <span className="italic">University of California, Los Angeles</span></li>
         </ul>
-      </div>
-
-      {/* Care Philosophy */}
-      <div className="mt-10">
-        <h2 className="text-xl font-medium">Our Care Philosophy</h2>
-        <p className="mt-2 text-slate-700">
-          We emphasize <strong>prevention</strong>, early diagnosis, and minimally invasive treatment. Checkups
-          include cleanings, cavity risk assessment, growth/development monitoring, and age-appropriate coaching
-          for brushing, flossing, and nutrition. We use <strong>digital X-rays</strong> only when clinically
-          indicated and keep exposure as low as reasonably achievable.
-        </p>
-        <p className="mt-2 text-slate-700">
-          For anxious patients, we start with communication tools that build trust. When needed, we may
-          recommend options like <strong>nitrous oxide</strong> or in select cases sedation — always discussed
-          with you beforehand so you can make the best decision for your child.
-        </p>
-      </div>
-
-      {/* Parent/Guardian Participation */}
-      <div className="mt-10">
-        <h2 className="text-xl font-medium">Parents &amp; Guardians</h2>
-        <p className="mt-2 text-slate-700">
-          Care works best as a team. We welcome your presence for younger or more anxious children, and we'll
-          guide increasing independence as kids grow more confident. You'll always have time to ask questions,
-          review findings, and understand next steps.
-        </p>
-      </div>
-
-      {/* New Patients / What to Expect */}
-      <div className="mt-10">
-        <h2 className="text-xl font-medium">New Patients</h2>
-        <p className="mt-2 text-slate-700">
-          First visits are relaxed and informative. We'll review health history, complete a gentle exam and
-          cleaning as appropriate, and share personalized tips to keep smiles healthy at home.
-        </p>
-        <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-700">
-          <li>Preventive checkups &amp; cleanings</li>
-          <li>Fluoride, sealants &amp; cavity risk counseling</li>
-          <li>Fillings, crowns &amp; space maintenance</li>
-          <li>Comfort options (e.g., <strong>nitrous oxide</strong>) when appropriate</li>
-        </ul>
-        <div className="not-prose mt-4 flex flex-wrap gap-3">
-          <Link
-            href="/appointments"
-            className="inline-block rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-orange-400"
-          >
-            Request Appointment
-          </Link>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }
-

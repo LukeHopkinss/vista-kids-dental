@@ -14,17 +14,29 @@ const ADDRESS_URL = "https://www.google.com/maps/place/1235+W+Vista+Way+f,+Vista
 // NAV LABELS AND ROUTES
 type NavItem =
   | { href: string; label: string }
-  | { label: string; children: { href: string; label: string }[] };
+  | {
+      label: string;
+      parentHref: string;                
+      children: { href: string; label: string }[];
+    };
 
 const nav: NavItem[] = [
-  { href: ADDRESS_URL, label: "1235 W Vista Way, Vista CA",},
-  { href: "/about", label: "about us" },
+  { href: ADDRESS_URL, label: "1235 W Vista Way, Vista CA" },
+  {
+    label: "about us",
+    parentHref: "/about",                
+    children: [
+      { href: "/about#why-pediatric-dentists", label: "Why Pediatric Dentists?" },
+      { href: "/about#about-dr-ta",      label: "About Dr. Ta" },
+    ],
+  },
   { href: "/services", label: "services" },
   {
     label: "patient info",
+    parentHref: "",
     children: [
       { href: "/office-policy", label: "Office Policy" },
-      { href: "/post-op", label: "Post-Op Instructions" },
+      { href: "/post-op",       label: "Post-Op Instructions" },
     ],
   },
   { href: "/contact", label: "contact" },
@@ -75,15 +87,30 @@ export default function Header() {
                   onPointerEnter={() => openMenu(item.label)}
                   onPointerLeave={closeMenuLater}
                 >
-                  <button
-                    type="button"
-                    className="capitalize inline-flex items-center gap-1 hover:text-orange-400"
-                    aria-haspopup="menu"
-                    aria-expanded={isOpen}
-                    onClick={() => setDesktopOpenKey(isOpen ? null : item.label)}
-                  >
-                    {item.label} <span aria-hidden>▾</span>
-                  </button>
+                  {/* Make the label a LINK to the parent page, keep a separate caret BUTTON */}
+                  <div className="inline-flex items-center gap-1">
+                    <Link
+                      href={"parentHref" in item ? item.parentHref : "#"}
+                      className="capitalize hover:text-orange-400"
+                      onClick={() => setDesktopOpenKey(null)} // close any open menu when navigating
+                    >
+                      {item.label}
+                    </Link>
+
+                    <button
+                      type="button"
+                      className="inline-flex items-center rounded px-1 py-0.5 hover:text-orange-400"
+                      aria-haspopup="menu"
+                      aria-expanded={isOpen}
+                      aria-label={`${item.label} menu`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setDesktopOpenKey(isOpen ? null : item.label);
+                      }}
+                    >
+                      ▾
+                    </button>
+                  </div>
 
                   <ul
                     role="menu"
