@@ -30,7 +30,15 @@ const nav: NavItem[] = [
       { href: "/about#about-dr-ta",      label: "About Dr. Ta" },
     ],
   },
-  { href: "/services", label: "services" },
+  { label: "services",
+    parentHref: "/services",
+    children: [
+      { href: "/preventative", label: "Preventative Dental Services"},
+      { href: "/restorative", label: "Restorative Dentistry for Kids"},
+      { href: "/sedation", label: "Sedation Dentistry"},
+      { href: "/other", label: "Other Services"},
+    ]
+   },
   {
     label: "patient info",
     parentHref: "",

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -20,14 +21,14 @@ const copy: Record<string, Entry> = {
       "Regular examinations support good dental health and a confident smile. We begin with a professional cleaning to remove tartar and buildup, then carefully examine each tooth to catch issues early—such as decay, damage, or signs of infection—so they can be addressed before they worsen.",
   },
   "preventative-dentistry": {
-    title: "Preventative Dentistry",
+    title: "Preventive Dentistry",
     body:
       "Routine cleanings remove plaque and tartar, including in hard-to-reach areas like along the gumline. After cleaning, we polish so teeth shine, and—when appropriate—apply fluoride to help prevent tooth decay.",
   },
   "restorative-dentistry": {
     title: "Restorative Dentistry",
     body:
-      "We can restore chipped or broken teeth with tooth-colored materials so they look natural. When needed, veneers or caps help cover defects. For missing teeth, options include implants (replacement roots) topped with crowns to restore normal size, shape, and function.",
+      "We can restore chipped or broken teeth with tooth-colored materials so they look natural. When needed, veneers or caps help cover defects. For missing teeth, options include implants topped with crowns to restore normal function.",
   },
   sealants: {
     title: "Sealants",
@@ -91,7 +92,15 @@ export default function Service({ params }: { params: { slug: string } }) {
   if (!data) return notFound();
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-10 prose">
+    <article className="mx-auto max-w-3xl px-4 py-10 pt-[72px] md:pt-[88px] prose">
+      {/* Four family buttons for quick jump to new service pages */}
+      <div className="not-prose mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <Link href="/preventative" className="rounded-lg border px-4 py-2 text-center hover:bg-orange-400 hover:text-white">Preventive Dental Services</Link>
+        <Link href="/restorative"  className="rounded-lg border px-4 py-2 text-center hover:bg-orange-400 hover:text-white">Restorative Dentistry for Kids</Link>
+        <Link href="/sedation"     className="rounded-lg border px-4 py-2 text-center hover:bg-orange-400 hover:text-white">Sedation Dentistry</Link>
+        <Link href="/other"        className="rounded-lg border px-4 py-2 text-center hover:bg-orange-400 hover:text-white">Other Services</Link>
+      </div>
+
       <h1 className="mb-2">{data.title}</h1>
       <p>{data.body}</p>
 

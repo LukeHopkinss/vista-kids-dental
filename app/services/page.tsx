@@ -3,41 +3,58 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Services",
-  description:
-    "Explore pediatric dental services: exams, cleanings, sealants, tooth-colored fillings, digital X-rays, sedation, emergency care, and more.",
+  description: "Explore pediatric dental service categories at Vista Kids Dental.",
   alternates: { canonical: "/services" },
 };
 
-const services = [
-  { slug: "cavities-and-fillings", title: "Cavities & Fillings", blurb: "Composite resin and other filling options." },
-  { slug: "emergency-dental-care", title: "Emergency Dental Care", blurb: "Service in case of emergencies." },
-  { slug: "oral-health-exams", title: "Oral Health Exams", blurb: "Professional cleanings and checkups." },
-  { slug: "preventative-dentistry", title: "Preventative Dentistry", blurb: "Cleanings, polishing, fluoride as needed." },
-  { slug: "restorative-dentistry", title: "Restorative Dentistry", blurb: "Fillings, veneers/caps, implants + crowns." },
-  { slug: "sealants", title: "Sealants", blurb: "Protective coating for chewing surfaces." },
-  { slug: "sedation-dentistry", title: "Sedation Dentistry", blurb: "Nitrous oxide for comfort during procedures." },
-  { slug: "silver-diamine-fluoride", title: "Silver Diamine Fluoride", blurb: "Helps strengthen teeth and prevent decay." },
-  { slug: "digital-x-rays", title: "Digital X-Rays", blurb: "See what we can't view with the naked eye." },
-  { slug: "intraoral-camera", title: "Intraoral Camera", blurb: "Photos that explain and track treatment." },
-];
+export default function ServicesPage() {
+  const buttons = [
+    { href: "/preventative", label: "Preventive Dental Services" },
+    { href: "/restorative", label: "Restorative Dentistry for Kids" },
+    { href: "/sedation", label: "Sedation Dentistry" },
+    { href: "/other", label: "Other Services" },
+  ];
 
-export default function Services() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-10">
+    <main className="mx-auto max-w-4xl px-4 py-10 pt-[72px] md:pt-[88px]">
       <h1 className="text-3xl font-semibold">Our Services</h1>
-      <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((s) => (
-          <li key={s.slug}>
-            <Link
-              href={`/services/${s.slug}`}
-              className="group block cursor-pointer rounded-lg border p-4 transition-colors hover:bg-orange-400 focus:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-400"
-            >
-              <h2 className="text-xl font-medium group-hover:text-white">{s.title}</h2>
-              <p className="text-slate-600 group-hover:text-white">{s.blurb}</p>
-            </Link>
-          </li>
+
+      
+      <section className="mt-6 space-y-6">
+        <div>
+          <h2 className="text-2xl font-medium">Our Care Philosophy</h2>
+          <p className="mt-2 text-slate-700">
+            We emphasize prevention, early diagnosis, and minimally invasive treatment such as SDF, SMART. Checkups include cleanings, cavity risk assessment, growth/development monitoring, and age-appropriate coaching for brushing, flossing, and nutrition. We use digital X-rays and keep exposure as low as reasonably achievable.
+          </p>
+          <p className="mt-2 text-slate-700">
+            For anxious patients, we start with communication tools that build trust. When needed, we may recommend options like nitrous oxide or when appropriate sedation (oral conscious sedation, in-office IV sedation, or general anesthesia at Rady Children&apos;s Hospital for patients with special needs)
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-medium">Parents &amp; Guardians</h2>
+          <p className="mt-2 text-slate-700">
+            Care works best as a team. We welcome your presence for younger or more anxious children, and we&apos;ll guide increasing independence as kids grow more confident. You&apos;ll always have time to ask questions, review findings, and understand next steps.
+          </p>
+        </div>
+      </section>
+      
+
+      
+      <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {buttons.map((b) => (
+          <Link
+            key={b.href}
+            href={b.href}
+            className="rounded-lg border px-4 py-3 text-center font-medium hover:bg-sky-600 hover:text-white"
+          >
+            {b.label}
+          </Link>
         ))}
-      </ul>
-    </section>
+      </div>
+    </main>
   );
 }
+
+
+
