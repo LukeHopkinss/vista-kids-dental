@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Post Treatment Instructions | Vista Kids Dental",
@@ -12,6 +13,17 @@ export default function PostTreatmentInstructionsPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 pt-[72px] md:pt-[88px]">
       <h1 className="text-3xl font-semibold">Post Treatment Instructions</h1>
+
+      <div className="mt-4 relative h-90 w-full overflow-hidden rounded-xl bg-slate-200">
+        <Image
+          src="/images/services/post-op-child.jpg"
+          alt="Post-Op Child"
+          fill
+          sizes="(min-width: 640px) 720px, 100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
 
       <p className="mt-4 text-slate-700">
         Please select one of the following categories to view the recommended post-treatment instructions:

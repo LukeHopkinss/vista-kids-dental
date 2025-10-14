@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -19,7 +20,17 @@ export default function ServicesPage() {
     <main className="mx-auto max-w-4xl px-4 py-10 pt-[72px] md:pt-[88px]">
       <h1 className="text-3xl font-semibold">Our Services</h1>
 
-      
+      <div className="mt-4 relative h-90 w-full overflow-hidden rounded-xl bg-slate-200">
+        <Image
+          src="/images/services/extra1.jpg"
+          alt="Our Services"
+          fill
+          sizes="(min-width: 640px) 720px, 100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
+
       <section className="mt-6 space-y-6">
         <div>
           <h2 className="text-2xl font-medium">Our Care Philosophy</h2>

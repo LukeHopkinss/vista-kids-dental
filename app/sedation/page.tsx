@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function SedationPage() {
   const subs = [
     { href: "#nitrous", label: "Nitrous Oxide Sedation" },
@@ -20,9 +23,20 @@ export default function SedationPage() {
       <section className="mt-8 text-slate-700">
         <p>
           At Vista Kids Dental, we're dedicated to providing safe, comfortable care for kids of all ages. And if your little one is nervous about an upcoming dental procedure, dental sedation may be the best way to keep them calm and ensure a smooth, stress-free experience.
-          Dr. Ta has years of experience with pediatric sedation dentistry, and is here to help your child get the care they need in Vista. Contact us (link) now to schedule a consultation.
+          Dr. Ta has years of experience with pediatric sedation dentistry, and is here to help your child get the care they need in Vista. <a className="underline text-sky-600" href="/appointments">Contact us</a> now to schedule a consultation.
         </p>
       </section>
+
+      <div className="mt-4 relative h-100 w-full overflow-hidden rounded-xl bg-slate-200">
+        <Image
+          src="/images/services/sedation-child.jpg"
+          alt="Sedation Dentistry placeholder"
+          fill
+          sizes="(min-width: 640px) 720px, 100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
 
       <section className="mt-8">
         <h2 className="text-2xl font-medium">We Offer Safe Sedation Dentistry For Your Child's Comfort</h2>
@@ -67,6 +81,15 @@ export default function SedationPage() {
           General anesthesia is always our last resort, since other methods of sedation are much less intense, and are also more affordable.
         </p>
       </section>
+
+      <div className="mt-10 flex w-full justify-center">
+        <Link
+            href="/appointments"
+            className="inline-block rounded-lg bg-sky-600 px-6 py-3 text-white font-medium hover:bg-orange-400"
+        >
+            Request Appointment
+        </Link>
+      </div>
     </main>
   );
 }

@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function PreventativePage() {
   const subs = [
     { href: "#dental-exam", label: "Dental Exam" },
@@ -10,7 +13,6 @@ export default function PreventativePage() {
     <main className="mx-auto max-w-4xl px-4 py-10 pt-[72px] md:pt-[88px]">
       <h1 className="text-3xl font-semibold">Preventive Dental Services</h1>
 
-      {/* Page-only sub buttons */}
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
         {subs.map((b) => (
           <a key={b.href} href={b.href} className="rounded-lg border px-4 py-2 text-center hover:bg-sky-600 hover:text-white">
@@ -19,6 +21,16 @@ export default function PreventativePage() {
         ))}
       </div>
 
+      <div className="mt-4 relative h-80 w-full overflow-hidden rounded-xl bg-slate-200">
+        <Image
+          src="/images/services/preventative-child.jpg"
+          alt="Preventive Dental Services placeholder"
+          fill
+          sizes="(min-width: 640px) 720px, 100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
 
       <section id="dental-exam" className="mt-10 scroll-mt-32 md:scroll-mt-40">
         <h2 className="text-2xl font-medium">Dental Exam</h2>
@@ -122,6 +134,15 @@ export default function PreventativePage() {
           Fluoride helps strengthen the teeth and can even reverse very minor decay (soft spots). It attracts minerals like calcium and phosphates to the teeth to make them stronger and protect your child's oral health.
         </p>
       </section>
+
+      <div className="mt-10 flex w-full justify-center">
+        <Link
+            href="/appointments"
+            className="inline-block rounded-lg bg-sky-600 px-6 py-3 text-white font-medium hover:bg-orange-400"
+        >
+            Request Appointment
+        </Link>
+      </div>
     </main>
   );
 }

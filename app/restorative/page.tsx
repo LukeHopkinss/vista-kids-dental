@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function RestorativePage() {
   const subs = [
     { href: "#white-fillings", label: "White Fillings" },
@@ -24,6 +27,19 @@ export default function RestorativePage() {
           Sometimes, children's teeth need a little dental work performed in order to
           improve or restore overall oral health. Some children face higher natural risk factors for tooth decay, damage, or disease than others. Dr. Ta is experienced, patient, and gentle enough to restore any child's precious smile.
         </p>
+
+        <figure className="mt-4 md:float-right md:ml-4 md:mb-2 w-full md:w-64">
+          <div className="relative h-40 w-full overflow-hidden rounded-lg bg-slate-200">
+            <Image
+              src="/images/services/restorative-child.jpg"
+              alt="Restorative care illustrative"
+              fill
+              sizes="256px"
+              className="object-cover"
+            />
+          </div>
+        </figure>
+
         <p className="mt-2 text-slate-700">
           Restorative dentistry refers to the prevention and treatment of diseases of the teeth in order to restore or bring them back to their best health. Restorative dentistry also includes the repair or replacement of damaged or defective teeth.
         </p>
@@ -151,6 +167,15 @@ export default function RestorativePage() {
           Nance - This space maintainer places bands on the first permanent molars and is a maxillary lingual arch that doesn't come into contact with the front teeth. The wire bar extends beyond the anterior teeth and rests on the roof of the mouth.
         </p>
       </section>
+
+      <div className="mt-10 flex w-full justify-center">
+        <Link
+            href="/appointments"
+            className="inline-block rounded-lg bg-sky-600 px-6 py-3 text-white font-medium hover:bg-orange-400"
+        >
+            Request Appointment
+        </Link>
+      </div>
     </main>
   );
 }

@@ -127,7 +127,7 @@ export default function Home() {
                   href="/about"
                   className="inline-block rounded-lg bg-sky-600 px-6 py-3 text-white font-medium hover:bg-orange-400"
                 >
-                  Learn more about us
+                  Learn more about us!
                 </Link>
               </div>
             </div>

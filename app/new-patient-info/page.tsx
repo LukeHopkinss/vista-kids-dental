@@ -1,10 +1,22 @@
 // app/new-patient-info/page.tsx
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NewPatientInfoPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 pt-[72px] md:pt-[88px]">
       <h1 className="text-3xl font-semibold">New Patient Info</h1>
+
+      <div className="mt-4 relative h-120 w-full overflow-hidden rounded-xl bg-slate-200">
+        <Image
+          src="/images/services/new-patient-child.jpg"
+          alt="New Patients"
+          fill
+          sizes="(min-width: 640px) 720px, 100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
 
       <section className="mt-6">
         <h2 className="text-2xl font-medium">When should you take your child to see a dentist?</h2>
