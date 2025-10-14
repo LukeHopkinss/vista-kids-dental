@@ -8,7 +8,7 @@ const LOGO_ALT = "Vista Kids Dental";
 const PHONE_TEL = "+17603305995";
 const PHONE_DISPLAY = "(760) 330-5995";
 const ADDRESS_DISPLAY = "1235 W Vista Way Ste. F Vista CA, 92083";
-const ADDRESS_URL = "https://www.google.com/maps/place/1235+W+Vista+Way+f,+Vista,+CA+92083/data=!4m2!3m1!1s0x80dc7154b5f4f1c9:0x27a70b0b159a4835?sa=X&ved=1t:242&ictx=111";
+const ADDRESS_URL = "https://www.google.com/maps/place/Vista+Kids+Dental/@33.1939697,-117.2679331,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc71219be9c465:0x62ae21e094f4d06c!8m2!3d33.1939697!4d-117.2679331!16s%2Fg%2F11zjn8pw0s?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D";
 
 
 // NAV LABELS AND ROUTES
