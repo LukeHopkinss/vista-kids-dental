@@ -1,5 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Restorative Dentistry for Kids | Vista Kids Dental",
+  description:
+    "White fillings, pulp therapy, crowns, SDF, and space maintainers to restore comfort and function.",
+  alternates: { canonical: "/restorative" },
+  openGraph: {
+    title: "Restorative Dentistry for Kids | Vista Kids Dental",
+    description:
+      "Gentle, kid-friendly care to repair teeth and protect growing smiles.",
+    url: "/restorative",
+    type: "website",
+  },
+};
 
 export default function RestorativePage() {
   const subs = [

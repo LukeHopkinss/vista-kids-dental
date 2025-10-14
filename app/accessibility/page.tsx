@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Accessibility",
-  description:
-    "Our commitment to full and equal access for guests and website visitors, including communication, website access, service animals, and feedback.",
+  description: "Accessibility information for Vista Kids Dental.",
   alternates: { canonical: "/accessibility" },
 };
 

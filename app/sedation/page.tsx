@@ -1,5 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sedation Dentistry | Vista Kids Dental",
+  description:
+    "Nitrous oxide, oral conscious sedation, and general anesthesia options for safe, comfortable pediatric care.",
+  alternates: { canonical: "/sedation" },
+  openGraph: {
+    title: "Sedation Dentistry | Vista Kids Dental",
+    description:
+      "Safe options to ease anxiety and ensure a smooth visit for kids.",
+    url: "/sedation",
+    type: "website",
+  },
+};
 
 export default function SedationPage() {
   const subs = [

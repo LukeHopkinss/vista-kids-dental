@@ -1,18 +1,22 @@
+// app/site-map/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
 import { STATIC_PATHS, SERVICE_SLUGS } from "@/lib/siteMapData";
 
 export const metadata: Metadata = {
-  title: "Site Map",
-  description:
-    "Browse all public pages on Vista Kids Dental — services, new patient info, policies, contact, and more.",
+  title: "Site Map | Vista Kids Dental",
+  description: "Quick links to pages on Vista Kids Dental.",
   alternates: { canonical: "/site-map" },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true }, // keep out of index; flip to true if you want it indexed
 };
 
+const prettify = (href: string) =>
+  (href === "/" ? "Home" : href.replace(/^\//, "").replace(/-/g, " "))
+    .replace(/\b\w/g, (m) => m.toUpperCase());
+
 export default function SiteMapPage() {
-  const staticLinks = STATIC_PATHS.filter((p) => p !== "/site-map"); // avoid self-link duplication
-  const serviceLinks = SERVICE_SLUGS.map((s) => `/services/${s}`);
+  const staticLinks = STATIC_PATHS.filter((p) => p !== "/site-map"); // no self-link
+  const serviceLinks = SERVICE_SLUGS; // already full paths like "/preventative"
 
   return (
     <section className="mx-auto max-w-3xl px-4 py-10">
@@ -22,8 +26,8 @@ export default function SiteMapPage() {
       <ul className="mt-3 list-disc pl-6 space-y-1">
         {staticLinks.map((href) => (
           <li key={href}>
-            <Link href={href} className="underline capitalize text-sky-700">
-              {href === "/" ? "Home" : href.replace(/^\//, "").replace(/-/g, " ")}
+            <Link href={href} className="underline text-sky-700">
+              {prettify(href)}
             </Link>
           </li>
         ))}
@@ -33,8 +37,8 @@ export default function SiteMapPage() {
       <ul className="mt-3 list-disc pl-6 space-y-1">
         {serviceLinks.map((href) => (
           <li key={href}>
-            <Link href={href} className="underline capitalize text-sky-700">
-              {href.split("/").pop()!.replace(/-/g, " ")}
+            <Link href={href} className="underline text-sky-700">
+              {prettify(href)}
             </Link>
           </li>
         ))}

@@ -3,9 +3,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: "Explore pediatric dental service categories at Vista Kids Dental.",
+  title: "Services | Vista Kids Dental",
+  description:
+    "Explore preventive, restorative, and sedation services designed for kids in Vista, CA.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Services | Vista Kids Dental",
+    description:
+      "Preventive, restorative, and sedation dentistry tailored to children.",
+    url: "/services",
+    type: "website",
+  },
 };
 
 export default function ServicesPage() {

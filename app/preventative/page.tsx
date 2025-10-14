@@ -1,5 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Preventive Dental Services | Vista Kids Dental",
+  description:
+    "Exams, infant visits, sealants, and fluoride treatments with a prevention-first approach for kids in Vista, CA.",
+  alternates: { canonical: "/preventative" },
+  openGraph: {
+    title: "Preventive Dental Services | Vista Kids Dental",
+    description:
+      "Exams, infant visits, sealants, and fluoride for healthy little smiles.",
+    url: "/preventative",
+    type: "website",
+  },
+};
 
 export default function PreventativePage() {
   const subs = [
