@@ -1,150 +1,112 @@
-// app/post-op/page.tsx
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Post-Op Instructions | Vista Kids Dental",
+  title: "Post Treatment Instructions | Vista Kids Dental",
   description:
-    "Care instructions after sealants, composite (white) fillings, amalgam fillings, stainless steel crowns, pulpotomy, local anesthetic, and extractions.",
-  alternates: { canonical: "/post-op" },
+    "Click to expand easy, parent-friendly post-treatment instructions for numbness, resin fillings, stainless steel crowns & space maintainers, and extractions.",
+  alternates: { canonical: "/post-treatment-instructions" },
+  robots: { index: true, follow: true },
 };
 
-export default function PostOp() {
+export default function PostTreatmentInstructionsPage() {
   return (
-    <section className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-semibold">Post-Op Instructions</h1>
-      <p className="mt-3 text-slate-700">
-        These guidelines will help your child heal comfortably after common pediatric dental procedures.
-        If anything seems unusual or you have concerns, please contact us.
+    <main className="mx-auto max-w-4xl px-4 py-10 pt-[72px] md:pt-[88px]">
+      <h1 className="text-3xl font-semibold">Post Treatment Instructions</h1>
+
+      <p className="mt-4 text-slate-700">
+        Please select one of the following categories to view the recommended post-treatment instructions:
       </p>
 
-      {/* Sealants */}
-      <div className="mt-10">
-        <h2 className="text-xl font-medium">Sealants</h2>
-        <p className="mt-2 text-slate-700">
-          In order to ensure the life of the sealant, please have your child follow these instructions:
-        </p>
-        <ul className="mt-2 list-disc pl-5 text-slate-700 space-y-1">
-          <li>
-            <strong>Do not chew ice cubes</strong> — this can cause the sealant to chip.
-          </li>
-          <li>
-            <strong>Do not eat hard, sticky, or chewy candy</strong> (e.g., Jolly Ranchers, caramel, Fruit
-            Roll-Ups). <strong>Sugarless gum is acceptable.</strong>
-          </li>
-          <li>
-            The sealant protects the <strong>chewing surface</strong> of the tooth, but <strong>good brushing
-            and flossing</strong> are still required to protect the sides of the teeth.
-          </li>
-        </ul>
-        <p className="mt-3 text-slate-700">
-          <strong>Guarantee:</strong> Dr. Ta guarantees the sealants for up to <strong>two (2) years</strong>{" "}
-          following the initial application as long as the patient is up to date on his/her{" "}
-          <strong>six (6) month check-ups</strong>. At each examination, Dr. Ta will examine the sealant and
-          if a sealant comes off in this two (2) year period, <strong>we will reapply a new sealant at no
-          charge</strong>.
-        </p>
-      </div>
+      <div className="mt-6 space-y-4">
+        {/* NUMBNESS */}
+        <details className="group rounded-lg border text-white bg-sky-600 p-4 open:shadow">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+            <span className="text-lg font-medium">
+              Numbness Post-Operative Instructions
+            </span>
+            <span
+              className="transition-transform group-open:rotate-180"
+              aria-hidden
+            >
+              ▼
+            </span>
+          </summary>
+          <div className="mt-3 space-y-2 text-white">
+            <p>The sensation of being numb after the appointment is typically the most challenging aspect for a child to understand.</p>
+            <ul className="list-disc space-y-1 pl-6">
+              <li>It may take 1-4 hours for the numbness to wear off.</li>
+              <li>Avoid eating foods that require much chewing (a soft food diet is recommended).</li>
+              <li>Monitor your child closely so that he/she does not bite their tongue, cheek or lips.</li>
+            </ul>
+          </div>
+        </details>
 
-      {/* Composite resin fillings */}
-      <div className="mt-8">
-        <h2 className="text-xl font-medium">Composite Resin Fillings (White Fillings)</h2>
-        <p className="mt-2 text-slate-700">
-          Since the resin filling is <strong>bonded to the tooth</strong>, <strong>sticky foods</strong> and{" "}
-          <strong>biting into hard food</strong> should be avoided so these fillings are not “pulled out”.
-          <strong> Good oral hygiene and brushing</strong> will protect the tooth from decay around the
-          filling.
-        </p>
-      </div>
+        {/* RESIN */}
+        <details className="group rounded-lg border text-white bg-sky-600 p-4 open:shadow">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+            <span className="text-lg font-medium">
+              Resin Post-Operative Instructions
+            </span>
+            <span className="transition-transform group-open:rotate-180" aria-hidden>▼</span>
+          </summary>
+          <div className="mt-3 space-y-2 text-white">
+            <p>If your child is numb, please follow the Numbness Post-Operative Instructions listed above.</p>
+            <ul className="list-disc space-y-1 pl-6">
+              <li>Avoid sticky, hard candies and chewing on ice to prevent breaking the filling or crown.</li>
+              <li>Avoid using front teeth to bite directly into hard food such as apples, carrots and corn on the cob.</li>
+              <li>Limit drinking or eating dark colored beverages and foods as this may cause staining and discoloration of the resin material.</li>
+              <li>
+                It is important to note that resin fillings are prone to recurrent decay (new decay around the filling margin) and it
+                should be brushed and flossed like a natural tooth.
+              </li>
+              <li>For any discomfort, Tylenol or Ibuprofen is recommended.</li>
+            </ul>
+          </div>
+        </details>
 
-      {/* Amalgam fillings */}
-      <div className="mt-8">
-        <h2 className="text-xl font-medium">Amalgam Fillings</h2>
-        <p className="mt-2 text-slate-700">
-          Sometimes teeth are <strong>slightly sensitive</strong> to new silver amalgam fillings for a few
-          days or several weeks, but this usually resolves with time.
-        </p>
-      </div>
+        {/* STAINLESS STEEL CROWN & SPACE MAINTAINER */}
+        <details className="group rounded-lg border text-white bg-sky-600 p-4 open:shadow">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+            <span className="text-lg font-medium">
+              Stainless Steel Crown &amp; Space Maintainer Post-Operative Instructions
+            </span>
+            <span className="transition-transform group-open:rotate-180" aria-hidden>▼</span>
+          </summary>
+          <div className="mt-3 space-y-2 text-white">
+            <ul className="list-disc space-y-1 pl-6">
+              <li>Your child will be numb so please follow the post-op instructions for numbness</li>
+              <li>To seat the crown or spacer correctly, work must be done just below the gumline; therefore, expect your child’s gums to be sore for 2-3 days.</li>
+              <li>Your child’s gum tissue may bleed upon brushing for the next few days. To help with healing, keep the area clean by gently brushing two to three times a day and flossing.</li>
+              <li>It may take a few days for your child to adjust to the crown or spacer. Do not let your child pick or pull at the crown or spacer as continuous force and pressure can pull it off.</li>
+              <li>Your child should avoid sticky, hard candies (i.e. taffy, suckers, starbursts, caramels) for the life of the crown or spacer. Although it is cemented on to the tooth structure, these sticky foods can cause the crown or spacer to become loose.</li>
+            </ul>
+          </div>
+        </details>
 
-      {/* Stainless steel crowns */}
-      <div className="mt-8">
-        <h2 className="text-xl font-medium">Stainless Steel Crowns</h2>
-        <p className="mt-2 text-slate-700">
-          To avoid the cost and time of replacement, please have your child <strong>avoid sticky foods</strong>{" "}
-          such as hard candy, caramel, and taffy. The crowned teeth will usually <strong>fall out
-          normally</strong> when the permanent tooth is ready to come in.
-        </p>
+        {/* EXTRACTION */}
+        <details className="group rounded-lg border text-white bg-sky-600 p-4 open:shadow">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+            <span className="text-lg font-medium">
+              Extraction Post-Operative Instructions
+            </span>
+            <span className="transition-transform group-open:rotate-180" aria-hidden>▼</span>
+          </summary>
+          <div className="mt-3 space-y-2 text-white">
+            <ul className="list-disc space-y-1 pl-6">
+              <li>Have your child bite on the provided gauze until bleeding is controlled, which may take up to 30 minutes</li>
+              <li>Remember that your child’s cheek, lips and tongue may be numb for approximately 2-4 hours after the procedure.</li>
+              <li>Avoid sippy cups, bottles, straws and pacifiers for the first 24 hours after the procedure. The sucking action may cause prolonged bleeding.</li>
+              <li>Avoid salty, spicy, acidic or crunchy foods for the first 24 hours as this may irritate the extraction site. Cold and/or soft foods are a great choice (i.e. ice cream, applesauce, mac and cheese, etc.).</li>
+              <li>Administer children’s Tylenol or Motrin for any discomfort.</li>
+              <li>Do not allow your child to participate in strenuous activity for the first 24 hours as this may increase bleeding from the extraction site.</li>
+              <li>A small amount of oozing is normal; however, if bleeding becomes heavy, have your child bite on a gauze or tea bag for 15 minutes.</li>
+              <li>If bleeding continues or is not controlled, call our office immediately.</li>
+            </ul>
+          </div>
+        </details>
       </div>
-
-      {/* Pulpotomy */}
-      <div className="mt-8">
-        <h2 className="text-xl font-medium">Pulpotomy</h2>
-        <p className="mt-2 text-slate-700">
-          The success of a pulpotomy depends on the severity of the dental infection and the body's reaction
-          to the treatment. If a pulpotomy is not performed, or if the nerve treatment fails and the tooth
-          <strong> abscesses</strong>, the <strong>tooth must be extracted</strong>. In that event, a{" "}
-          <strong>space maintainer</strong> will be needed to hold space for the permanent tooth. A tooth may
-          abscess <strong>with or without pain</strong>; therefore, regular <strong>six (6) month
-          check-ups</strong> are recommended to keep the tooth under observation.
-        </p>
-      </div>
-
-      {/* Local anesthetic */}
-      <div className="mt-8">
-        <h2 className="text-xl font-medium">Local Anesthetic</h2>
-        <p className="mt-2 text-slate-700">
-          Typically the numb feeling may last <strong>2-4 hours</strong> after treatment, affecting the
-          cheeks, lips, and tongue. This can be a curious sensation for a child—take care that your child{" "}
-          <strong>does not bite, suck, or chew</strong> the lips, tongue, or cheek. Please keep to a{" "}
-          <strong>liquid diet until the anesthetic has worn off</strong>. When the numbness (“bubbles”) wears
-          off, there can be a <strong>10-15 minute</strong> period of increased tingling that may cause
-          anxiety; reassure your child it will pass and, if needed, give <strong>Children's Tylenol or
-          Children's Motrin</strong> as directed on the package.
-        </p>
-      </div>
-
-      {/* Extractions */}
-      <div className="mt-8">
-        <h2 className="text-xl font-medium">Extractions</h2>
-        <ul className="mt-2 list-disc pl-5 text-slate-700 space-y-1">
-          <li>
-            Give <strong>no carbonated beverages</strong>, <strong>no hot foods or drinks</strong>, and{" "}
-            <strong>no snack chips for 24 hours</strong>.
-          </li>
-          <li>
-            <strong>No drinking through a straw for 24 hours</strong> after tooth removal.
-          </li>
-          <li>
-            <strong>No vigorous rinsing</strong> for 24 hours.
-          </li>
-          <li>
-            To control minimal bleeding, have your child bite on a <strong>sterile gauze with light
-            pressure</strong> for a few minutes.
-          </li>
-          <li>
-            If minor swelling or pain occurs, apply an <strong>ice pack</strong> to the area (
-            <strong>15 minutes on</strong> and <strong>15 minutes off</strong> for one hour). If swelling or
-            pain persist, please text the office promptly.
-          </li>
-          <li>
-            For discomfort give <strong>Children's Tylenol</strong> or <strong>Children's Motrin</strong>{" "}
-            (liquid or pills—<strong>no chewables</strong>) as the package directs.
-          </li>
-        </ul>
-      </div>
-
-      {/* CTAs */}
-      <div className="mt-10 flex flex-wrap gap-3">
-        <a
-          href="/appointments"
-          className="rounded-lg bg-sky-600 px-4 py-2 text-white font-medium hover:bg-orange-400"
-        >
-          Request Appointment
-        </a>
-        <a href="tel:+17603305995" className="rounded-lg border px-4 py-2 hover:text-orange-400">
-          Call Us!
-        </a>
-      </div>
-    </section>
+    </main>
   );
 }
+
 

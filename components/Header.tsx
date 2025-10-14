@@ -41,9 +41,9 @@ const nav: NavItem[] = [
    },
   {
     label: "patient info",
-    parentHref: "",
+    parentHref: "/new-patient-info",
     children: [
-      { href: "/office-policy", label: "Office Policy" },
+      { href: "/insurance-payments", label: "Insurance and Payments" },
       { href: "/post-op",       label: "Post-Op Instructions" },
     ],
   },
