@@ -94,96 +94,43 @@ export default function Home() {
       </section>
     
     */}
-     
-
-      {/* FEATURED SERVICES (mirror their Services hub, but as cards) */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <h2 className="text-2xl font-semibold">Comprehensive Pediatric Services</h2>
-          <p className="mt-2 text-slate-700">
-            Prevention, comfort, and communication—everything your child needs in one place.
-          </p>
-
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
-              <li key={f.href}>
-                <Link
-                  href={f.href}
-                  className="group block rounded-2xl border p-5 transition-colors hover:bg-orange-400 focus:bg-orange-400 focus:outline-none"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border">
-                      <span aria-hidden>{f.emoji}</span>
-                    </div>
-                    <h3 className="text-lg font-medium group-hover:text-white">{f.title}</h3>
-                  </div>
-                  <p className="mt-2 text-slate-600 group-hover:text-white">{f.blurb}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <div className="not-prose mt-6">
-            <Link
-              href="/services"
-              className="inline-block rounded-lg border px-5 py-3 hover:bg-orange-400 hover:text-white"
-            >
-              Explore all services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* NEW PATIENTS (mirrors their New Patients intro) */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <div className="grid gap-6 rounded-3xl border p-6 lg:grid-cols-2 lg:items-center">
-          <div>
-            <h2 className="text-2xl font-semibold">New Patients</h2>
-            <p className="mt-2 text-slate-700">
-              First visits are relaxed and informative. We'll review health history, complete a gentle exam and
-              cleaning as appropriate, and share age-specific tips for home care.
-            </p>
-            <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-1">
-              <li>Friendly introductions and tell-show-do</li>
-              <li>Digital X-rays only when indicated</li>
-              <li>Nitrous oxide available when appropriate</li>
-            </ul>
-            <div className="not-prose mt-5 flex flex-wrap gap-3">
-              <Link href="/office-policy" className="inline-block rounded-lg border px-5 py-3 hover:text-orange-400">
-                Office Policy
-              </Link>
-              <Link href="/post-op" className="inline-block rounded-lg border px-5 py-3 hover:text-orange-400">
-                Post-Op Instructions
-              </Link>
-            </div>
-          </div>
-          <div className="relative h-[260px] w-full overflow-hidden rounded-2xl border">
-            <Image
-              src="/images/hero/new-patients.jpg"
-              alt="New patients welcome"
-              fill
-              sizes="(min-width: 1024px) 520px, 90vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
+      
       {/* MEET OUR TEAM PREVIEW */}
       <section className="bg-slate-50">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <h2 className="text-2xl font-semibold">Meet Dr. Ta</h2>
-          <p className="mt-2 text-slate-700">
-            A friendly clinical dentist focused on comfort, communication, and kid-friendly care.
-          </p>
+        <div className="mx-auto max-w-7xl px-4 py-20">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About Us</h2>
 
-          <div className="not-prose mt-4">
-            <Link
-              href="/about"
-              className="inline-block rounded-lg bg-sky-600 px-5 py-3 text-white font-medium hover:bg-orange-400"
-            >
-              Dr. Ta, board certified dentist!
-            </Link>
+          <div className="mt-10 grid items-center gap-10 md:grid-cols-2">
+            {/* Larger portrait container */}
+            <div className="relative mx-auto h-[520px] w-full max-w-[620px] overflow-hidden rounded-3xl border bg-slate-200 shadow-sm md:h-[700px]">
+              <Image
+                src="/images/about/dr-ta.jpg" /* put your photo at public/images/about/dr-ta.jpg */
+                alt="Dr. Tuong (David) Ta"
+                fill
+                sizes="(min-width: 1024px) 620px, 90vw"
+                className="object-cover object-center"
+                priority
+              />
+            </div>
+
+            {/* Copy + CTA + small headshot spot if you want to keep it */}
+            <div>
+              <h3 className="text-3xl font-semibold sm:text-4xl">
+                Meet <span className="text-sky-600">Dr. Ta</span>
+              </h3>
+              <p className="mt-4 text-lg text-slate-700">
+                A friendly, board-certified pediatric dentist focused on comfort, communication, and kid-friendly care.
+              </p>
+
+              <div className="not-prose mt-6">
+                <Link
+                  href="/about"
+                  className="inline-block rounded-lg bg-sky-600 px-6 py-3 text-white font-medium hover:bg-orange-400"
+                >
+                  Learn more about us
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -232,7 +179,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-12 text-center">
           <h2 className="text-2xl font-semibold text-white">Ready for an easy first visit?</h2>
           <p className="mt-2 text-slate-300">
-            Request an appointment—our team will help you choose the best time for your child.
+            Request an appointment — our team will help you choose the best time for your child.
           </p>
           <div className="not-prose mt-5">
             <Link
