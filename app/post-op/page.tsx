@@ -75,8 +75,8 @@ export default function PostTreatmentInstructionsPage() {
           <div className="mt-3 space-y-2 text-white">
             <ul className="list-disc space-y-1 pl-6">
               <li>Your child will be numb so please follow the post-op instructions for numbness</li>
-              <li>To seat the crown or spacer correctly, work must be done just below the gumline; therefore, expect your child’s gums to be sore for 2-3 days.</li>
-              <li>Your child’s gum tissue may bleed upon brushing for the next few days. To help with healing, keep the area clean by gently brushing two to three times a day and flossing.</li>
+              <li>To seat the crown or spacer correctly, work must be done just below the gumline; therefore, expect your child's gums to be sore for 2-3 days.</li>
+              <li>Your child's gum tissue may bleed upon brushing for the next few days. To help with healing, keep the area clean by gently brushing two to three times a day and flossing.</li>
               <li>It may take a few days for your child to adjust to the crown or spacer. Do not let your child pick or pull at the crown or spacer as continuous force and pressure can pull it off.</li>
               <li>Your child should avoid sticky, hard candies (i.e. taffy, suckers, starbursts, caramels) for the life of the crown or spacer. Although it is cemented on to the tooth structure, these sticky foods can cause the crown or spacer to become loose.</li>
             </ul>
@@ -94,10 +94,10 @@ export default function PostTreatmentInstructionsPage() {
           <div className="mt-3 space-y-2 text-white">
             <ul className="list-disc space-y-1 pl-6">
               <li>Have your child bite on the provided gauze until bleeding is controlled, which may take up to 30 minutes</li>
-              <li>Remember that your child’s cheek, lips and tongue may be numb for approximately 2-4 hours after the procedure.</li>
+              <li>Remember that your child's cheek, lips and tongue may be numb for approximately 2-4 hours after the procedure.</li>
               <li>Avoid sippy cups, bottles, straws and pacifiers for the first 24 hours after the procedure. The sucking action may cause prolonged bleeding.</li>
               <li>Avoid salty, spicy, acidic or crunchy foods for the first 24 hours as this may irritate the extraction site. Cold and/or soft foods are a great choice (i.e. ice cream, applesauce, mac and cheese, etc.).</li>
-              <li>Administer children’s Tylenol or Motrin for any discomfort.</li>
+              <li>Administer children's Tylenol or Motrin for any discomfort.</li>
               <li>Do not allow your child to participate in strenuous activity for the first 24 hours as this may increase bleeding from the extraction site.</li>
               <li>A small amount of oozing is normal; however, if bleeding becomes heavy, have your child bite on a gauze or tea bag for 15 minutes.</li>
               <li>If bleeding continues or is not controlled, call our office immediately.</li>
