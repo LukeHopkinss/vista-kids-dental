@@ -37,42 +37,6 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      {/* Why Pediatric Dentists? (anchor target for /about#why-pediatric-dentists) */}
-      <section
-        id="why-pediatric-dentists"
-        aria-labelledby="why-heading"
-        // Increase scroll margin so the heading isn't hidden under the fixed header
-        className="scroll-mt-32 md:scroll-mt-40 mb-12"
-      >
-        <h2 id="why-heading" className="text-xl md:text-2xl font-medium">Why Pediatric Dentists?</h2>
-        <p className="mt-3 text-slate-700">
-          Most families with children rely on a pediatrician to be responsible for the health of their kids, and the
-          same approach should be taken with dentistry. Pediatric dentists specialize in the oral healthcare of
-          children and patients with special needs. Here are the answers to some frequently asked questions about
-          pediatric dentists:
-        </p>
-
-        <h3 className="mt-6 text-lg font-semibold">What Does a Pediatric Dentist Do?</h3>
-        <p className="mt-2 text-slate-700">
-          A pediatric dentist is a dentist that after graduating from dental school completes an additional 2-3 years
-          of education focused solely on the oral health of children and those with special needs. This additional
-          schooling encompasses topics such as oral trauma, dental emergencies, sedation and general anesthesia, as
-          well as managing cases with extensive dental needs. Furthermore, pediatric dentists train in the behavior
-          management of pediatric patients, a critical skill needed to lower dental anxiety and, consequently, lower
-          the chance of any long-term “dental trauma”.
-        </p>
-        <p className="mt-2 text-slate-700">
-          Pediatric dentists are professionals who have completed a specialized course of dentistry that caters to
-          children who have special needs or otherwise need gentler care. The program consists of two to three years
-          of further training after graduation from dental school. It includes hospital training, where they work
-          with children who have more severe dental needs and emergencies, and training in numerous orthodontic
-          teeth-straightening methods. Pediatric dentists work closely with pediatricians and general dentists, who
-          refer select patients for this specialized dental treatment that requires this advanced training. The
-          American Academy of Pediatric Dentistry (AAPD) is an organization of pediatric dentists, and its website
-          has a good selection of brochures explaining their role in dentistry.
-        </p>
-      </section>
-
       {/* About Dr. Ta (anchor target for /about#about-dr-ta) */}
       <section
         id="about-dr-ta"
@@ -113,6 +77,42 @@ export default function AboutPage() {
           <li>Member — American Academy of Pediatric Dentistry (AAPD)</li>
           <li>Member — American Dental Association (ADA) &amp; state/local dental societies</li>
         </ul>
+      </section>
+
+      {/* Why Pediatric Dentists? (anchor target for /about#why-pediatric-dentists) */}
+      <section
+        id="why-pediatric-dentists"
+        aria-labelledby="why-heading"
+        // Increase scroll margin so the heading isn't hidden under the fixed header
+        className="scroll-mt-32 md:scroll-mt-40 mb-12"
+      >
+        <h2 id="why-heading" className="text-xl md:text-2xl font-medium">Why Pediatric Dentists?</h2>
+        <p className="mt-3 text-slate-700">
+          Most families with children rely on a pediatrician to be responsible for the health of their kids, and the
+          same approach should be taken with dentistry. Pediatric dentists specialize in the oral healthcare of
+          children and patients with special needs. Here are the answers to some frequently asked questions about
+          pediatric dentists:
+        </p>
+
+        <h3 className="mt-6 text-lg font-semibold">What Does a Pediatric Dentist Do?</h3>
+        <p className="mt-2 text-slate-700">
+          A pediatric dentist is a dentist that after graduating from dental school completes an additional 2-3 years
+          of education focused solely on the oral health of children and those with special needs. This additional
+          schooling encompasses topics such as oral trauma, dental emergencies, sedation and general anesthesia, as
+          well as managing cases with extensive dental needs. Furthermore, pediatric dentists train in the behavior
+          management of pediatric patients, a critical skill needed to lower dental anxiety and, consequently, lower
+          the chance of any long-term “dental trauma”.
+        </p>
+        <p className="mt-2 text-slate-700">
+          Pediatric dentists are professionals who have completed a specialized course of dentistry that caters to
+          children who have special needs or otherwise need gentler care. The program consists of two to three years
+          of further training after graduation from dental school. It includes hospital training, where they work
+          with children who have more severe dental needs and emergencies, and training in numerous orthodontic
+          teeth-straightening methods. Pediatric dentists work closely with pediatricians and general dentists, who
+          refer select patients for this specialized dental treatment that requires this advanced training. The
+          American Academy of Pediatric Dentistry (AAPD) is an organization of pediatric dentists, and its website
+          has a good selection of brochures explaining their role in dentistry.
+        </p>
       </section>
     </main>
   );
