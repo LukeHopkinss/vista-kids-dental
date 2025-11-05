@@ -58,8 +58,7 @@ export default function AboutPage() {
           and certificate in pediatric dentistry at the University of Rochester, Eastman Institute of Oral Health.
         </p>
         <p className="mt-2 text-slate-700">
-          Dr. Ta and his wife, Mymy, reside in Carlsbad with their three active children, Adrianna, Andrew and
-          Colin. When he is not in the office, he is pretty much an Uber driver for his kids to their volleyball,
+          Dr. Ta and his wife, Mymy, reside in Carlsbad with their three active children. When he is not in the office, he is pretty much an Uber driver for his kids to their volleyball,
           football, and basketball practices and games. He is also their biggest cheerleader at all of their games
           and tournaments.
         </p>

@@ -7,7 +7,7 @@ import BackgroundBlobs from "@/components/BackgroundBlobs";
 export const metadata: Metadata = {
   title: "Pediatric Dentist in Vista, CA",
   description:
-    "Gentle pediatric dentistry for infants, children, and teens in Vista, CA. Cleanings, sealants, fillings, digital X-rays, and same-day emergency care.",
+    "Gentle pediatric dentistry for infants, children, and teens in Vista, CA. Cleanings, sealants, fillings, digital X-rays, and same-day emergency care. Serving cities of Carlsbad, Oceanside, San Marcos, Fallbrook, Escondido, and Encinitas",
   alternates: { canonical: "/" },
 };
 
@@ -26,8 +26,9 @@ export default function Home() {
               Welcome to <span className="text-sky-600">Vista Kids Dental</span>
             </h1>
             <p className="mt-4 text-slate-700">
-              Prevention-first care for infants, children, and teens—cleanings, sealants, fillings,
-              and emergency help when you need it.
+              We are a locally owned private pediatric dental office located in Vista, CA. Our mission is 
+              to deliver gentle, compassionate, fun, and minimally invasive dental care for children in Vista
+              and the surrounding cities of Carlsbad, Oceanside, San Marcos, Fallbrook, Escondido, and Encinitas.
             </p>
 
             <div className="not-prose mt-6 flex flex-wrap gap-3">
