@@ -7,11 +7,13 @@ export const STATIC_PATHS: string[] = [
   "/sedation",
   "/other",
   "/new-patient-info",
-  "/insurance-and-payments",
-  "/post-treatment-instructions",
+  "/insurance-payments",
+  "/post-op",
   "/contact",
-  "/request-appointment",
+  "/appointments",
   "/site-map",
+  "/terms-conditions",
+  "/privacy-policy",
 ];
 
 export const SERVICE_SLUGS: string[] = [
